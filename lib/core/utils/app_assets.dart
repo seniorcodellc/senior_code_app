@@ -62,6 +62,17 @@ class AppAssets with PngAssets, SvgAssets, VideoAssets {
       "${PngAssets.pngAssets}graphic_design_image.png";
   static const String doneImage =
       "${PngAssets.pngAssets}done_confirmed_screen_image.png";
+
+  static const String firstAboutUsImage =
+      "${PngAssets.pngAssets}first_about_us_image.png";
+  static const String secondAboutUsImage =
+      "${PngAssets.pngAssets}second_about_us_image.png";
+  static const String thirdAboutUsImage =
+      "${PngAssets.pngAssets}third_about_us_image.png";
+  static const String fourthAboutUsImage =
+      "${PngAssets.pngAssets}fourth_about_us_image.png";
+  static const String fifthAboutUsImage =
+      "${PngAssets.pngAssets}fifth_about_us_image.png";
   // Icons SVG
   static const String carSolidIcon = "${SvgAssets.svgAssets}car_solid.svg";
   static const String calenderIcon = "${SvgAssets.svgAssets}calendar.svg";

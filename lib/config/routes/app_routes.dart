@@ -1,17 +1,20 @@
 import '../../exports.dart';
+import '../../featuers/aboutUs/presentation/screen/about_us_screen.dart';
 import 'routes_exports.dart';
 
 class Routes {
   Routes._internal();
+
+  static const String aboutUsRoute = "AboutUsScreen";
+  static const String bottomNavigationBar = "BottomNavigationBar";
+  static const String confirmedRoute = "ConfirmedScreen";
+  static const String homeRoute = "HomeScreen";
   static const String onBoardingRoute = "OnBoardingScreen";
+  static const String resetPasswordRoute = "ResetPasswordScreen";
+  static const String sectionsRoute = "SectionScreen";
   static const String signinRoute = "SigninScreen";
   static const String signupRoute = "SignupScreen";
   static const String verificationRoute = "VerificationScreen";
-  static const String resetPasswordRoute = "ResetPasswordScreen";
-  static const String homeRoute = "HomeScreen";
-  static const String bottomNavigationBar = "BottomNavigationBar";
-  static const String sectionsRoute = "SectionScreen";
-  static const String confirmedRoute = "ConfirmedScreen";
 }
 
 class RouteGenerator {
@@ -55,10 +58,23 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (context) => const ConfirmedScreen(),
         );
-        
+      case Routes.aboutUsRoute:
+        return MaterialPageRoute(
+          builder: (context) => const AboutUsScreen(),
+        );
       // Default:
       default:
-        return null;
+        //! TODO: In release mode, return `null`. In development or debug mode, comment out `null` and  use `MaterialPageRoute` to enhance the user experience (UX).
+        // return null;
+        return MaterialPageRoute(
+          builder: (context) => Scaffold(
+            body: Center(
+              child: Text(
+                "No route defined for ${routeSettings.name}",
+              ),
+            ),
+          ),
+        );
     }
   }
 }
