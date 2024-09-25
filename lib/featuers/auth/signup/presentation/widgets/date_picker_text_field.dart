@@ -33,9 +33,8 @@ class DatePickerTextField extends StatefulWidget {
     this.radius,
     this.pickedDateColor = Colors.black, // Default to black
   });
-
-  @override
-  _DatePickerTextFieldState createState() => _DatePickerTextFieldState();
+    @override
+  State<DatePickerTextField> createState() => _DatePickerTextFieldState();
 }
 
 class _DatePickerTextFieldState extends State<DatePickerTextField> {

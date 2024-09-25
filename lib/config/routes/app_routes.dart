@@ -11,6 +11,7 @@ class Routes {
   static const String homeRoute = "HomeScreen";
   static const String bottomNavigationBar = "BottomNavigationBar";
   static const String sectionsRoute = "SectionScreen";
+  static const String confirmedRoute = "ConfirmedScreen";
 }
 
 class RouteGenerator {
@@ -45,10 +46,16 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (context) => const CustomBottomNavigationBar(),
         );
+      //! Home Related Routes
       case Routes.sectionsRoute:
         return MaterialPageRoute(
           builder: (context) => const SectionsScreen(),
         );
+      case Routes.confirmedRoute:
+        return MaterialPageRoute(
+          builder: (context) => const ConfirmedScreen(),
+        );
+        
       // Default:
       default:
         return null;
