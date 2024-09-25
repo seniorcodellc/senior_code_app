@@ -1,3 +1,4 @@
+import 'package:senior_code_app/config/routes/app_routes.dart';
 import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../core/utils/app_styels.dart';
@@ -98,7 +99,9 @@ class _ReservationFormSectionState extends State<ReservationFormSection> {
           textStyle: AppStyles.getBoldStyle(
             color: AppColors.steelBlue,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, Routes.confirmedRoute);
+          },
         ),
       ],
     );

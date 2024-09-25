@@ -60,6 +60,8 @@ class AppAssets with PngAssets, SvgAssets, VideoAssets {
       "${PngAssets.pngAssets}real_state_project.png";
   static const String graphicDesignImage =
       "${PngAssets.pngAssets}graphic_design_image.png";
+  static const String doneImage =
+      "${PngAssets.pngAssets}done_confirmed_screen_image.png";
   // Icons SVG
   static const String carSolidIcon = "${SvgAssets.svgAssets}car_solid.svg";
   static const String calenderIcon = "${SvgAssets.svgAssets}calendar.svg";
