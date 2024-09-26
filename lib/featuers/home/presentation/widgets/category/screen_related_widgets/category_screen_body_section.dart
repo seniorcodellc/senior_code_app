@@ -1,8 +1,8 @@
 import 'package:senior_code_app/core/extensions.dart';
 
-import '../../../../../core/utils/app_styels.dart';
-import '../../../../../core/widgets/home_and_related_screens_custom_app_bar.dart';
-import '../../../../../exports.dart';
+import '../../../../../../core/utils/app_styels.dart';
+import '../../../../../../core/widgets/home_and_related_screens_custom_app_bar.dart';
+import '../../../../../../exports.dart';
 import 'category_screen_list_view_section.dart';
 
 class CategoryScreenBodySection extends StatelessWidget {

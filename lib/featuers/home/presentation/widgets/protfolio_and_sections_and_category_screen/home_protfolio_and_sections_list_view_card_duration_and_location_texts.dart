@@ -1,8 +1,8 @@
 import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../../core/utils/app_styels.dart';
-import '../../../../../core/widgets/custome_svg_image.dart';
 import '../../../../../exports.dart';
+import '../home_location_icons_and_location_text.dart';
 
 class HomeProtfolioAndSectionsAndCategoryListViewCardDurationAndLocationTexts
     extends StatelessWidget {
@@ -39,26 +39,10 @@ class HomeProtfolioAndSectionsAndCategoryListViewCardDurationAndLocationTexts
               ), // Customizable duration style
         ),
         spaceBetweenDuartionAndLocation?.hs ?? 20.hs,
-        Row(
-          children: [
-            CustomSVGImage(
-              asset: AppAssets.locationIcon,
-              height: 24.h,
-              width: 24.w,
-              color: locationIconColor,
-            ),
-            4.hs,
-            Text(
-              projectLocation, // Dynamic location
-              overflow: TextOverflow.ellipsis,
-              maxLines: 1,
-              style: projectLocationStyle ??
-                  AppStyles.getMediumStyle(
-                    fontSize: 13,
-                    color: AppColors.black,
-                  ), // Customizable location style
-            ),
-          ],
+        HomeLocationIconAndLocationText(
+          projectLocation: projectLocation,
+          locationIconColor: locationIconColor,
+          projectLocationStyle: projectLocationStyle,
         ),
       ],
     );

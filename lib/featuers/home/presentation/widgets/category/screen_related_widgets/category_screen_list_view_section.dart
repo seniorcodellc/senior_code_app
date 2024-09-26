@@ -1,13 +1,17 @@
-import '../../../../../core/utils/app_styels.dart';
-import '../../../../../exports.dart';
-import '../protfolio_and_sections_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
+import '../../../../../../config/routes/app_routes.dart';
+import '../../../../../../core/utils/app_styels.dart';
+import '../../../../../../exports.dart';
+import '../../protfolio_and_sections_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
 
 class CategoryListViewSection extends StatelessWidget {
   final int categoryListViewItemCount;
   final Color? cardColor;
 
-  const CategoryListViewSection(
-      {super.key, required this.categoryListViewItemCount, this.cardColor});
+  const CategoryListViewSection({
+    super.key,
+    required this.categoryListViewItemCount,
+    this.cardColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +20,9 @@ class CategoryListViewSection extends StatelessWidget {
         categoryListViewItemCount,
         (index) {
           return PortfolioAndSectionsAndCategoryListViewItemCard(
+            cardOnTap: () {
+              Navigator.pushNamed(context, Routes.categoryDetailsRoute,);
+            },
             cardLeftPadding: 0,
             projectImageHeight: 119,
             projectImageWidth: 129,

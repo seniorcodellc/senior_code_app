@@ -1,7 +1,7 @@
 import 'package:senior_code_app/core/extensions.dart';
 
-import '../../../../../exports.dart';
-import '../protfolio_and_sections_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
+import '../../../../../../exports.dart';
+import '../../protfolio_and_sections_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
 
 class SectionListView extends StatelessWidget {
   final int sectionListViewItemCount;

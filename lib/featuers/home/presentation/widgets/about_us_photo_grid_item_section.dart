@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:senior_code_app/core/extensions.dart';
 import 'package:senior_code_app/core/widgets/custom_image_provider_from_assets.dart';
 
-class AboutUsPhotoGridItemSection extends StatelessWidget {
+class HomePhotoGridItemSection extends StatelessWidget {
   final String imagePath;
   final bool isNetworkImage;
   final double? imageWidth;
@@ -10,7 +10,7 @@ class AboutUsPhotoGridItemSection extends StatelessWidget {
   final BoxFit? assetImagefit;
   final double? assetsImageRadius;
 
-  const AboutUsPhotoGridItemSection({
+  const HomePhotoGridItemSection({
     super.key,
     required this.imagePath,
     this.isNetworkImage = false,

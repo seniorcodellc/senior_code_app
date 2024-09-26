@@ -3,7 +3,7 @@ import 'package:senior_code_app/core/extensions.dart';
 import '../../../../core/widgets/custom_image_provider_from_assets.dart';
 import '../../../../exports.dart';
 import '../../data/about_us_photo_paths.dart';
-import 'about_us_dynamic_photo_layout_section.dart';
+import '../../../home/presentation/widgets/home_dynamic_photo_layout_section.dart';
 
 class AbouUsImagesSection extends StatelessWidget {
   const AbouUsImagesSection({super.key});
@@ -19,7 +19,7 @@ class AbouUsImagesSection extends StatelessWidget {
           assetsImageRadius: 10,
         ),
         22.vs,
-        AboutUsDynamicPhotoLayoutSection(
+        HomeDynamicPhotoLayoutSection(
           assetsImageRadius: 10,
           imageWidth: 147,
           photoPaths: aboutUsPhotoPaths,

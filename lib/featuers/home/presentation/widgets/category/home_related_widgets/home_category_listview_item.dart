@@ -1,8 +1,8 @@
 import 'package:senior_code_app/core/extensions.dart';
 import 'package:senior_code_app/core/utils/app_styels.dart';
 
-import '../../../../../config/routes/app_routes.dart';
-import '../../../../../exports.dart';
+import '../../../../../../config/routes/app_routes.dart';
+import '../../../../../../exports.dart';
 
 class CategoryListViewItem extends StatelessWidget {
   final int itemIndex;

@@ -6,5 +6,7 @@ export '../../featuers/home/presentation/screens/home_screen.dart';
 export '../../core/widgets/bottom_navigation_bar/bottom_navigation_bar.dart';
 export '../../featuers/home/presentation/screens/sections_screen.dart';
 export '../../featuers/confirmed/presentation/screen/confirmed_screen.dart';
-
-
+export 'package:senior_code_app/featuers/contact_us/presentation/screen/contact_us_screen.dart';
+export '../../featuers/aboutUs/presentation/screen/about_us_screen.dart';
+export '../../featuers/category_details/presentation/screen/category_details_screen.dart';
+export '../../featuers/home/presentation/screens/category_screen.dart';

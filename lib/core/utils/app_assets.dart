@@ -74,6 +74,23 @@ class AppAssets with PngAssets, SvgAssets, VideoAssets {
   static const String fifthAboutUsImage =
       "${PngAssets.pngAssets}fifth_about_us_image.png";
   static const String fattoImage = "${PngAssets.pngAssets}fatto.png";
+
+  static const String fattoAccountImage =
+      "${PngAssets.pngAssets}fatto_account.png";
+  static const String fattoDelivered1Image =
+      "${PngAssets.pngAssets}fatto_delivered1.png";
+  static const String fattoDelivered2Image =
+      "${PngAssets.pngAssets}fatto_delivered2.png";
+  static const String fattoOnBoarding1Image =
+      "${PngAssets.pngAssets}fatto_onboarding.png";
+  static const String fattoOnBoarding2Image =
+      "${PngAssets.pngAssets}fatto_onboarding2.png";
+  static const String fattoOnBoarding3Image =
+      "${PngAssets.pngAssets}fatto_onboarding3.png";
+  static const String fattoProductImage =
+      "${PngAssets.pngAssets}fatto_product.png";
+  static const String fattoProduct35Image =
+      "${PngAssets.pngAssets}fatto_product35.png";
   // Icons SVG
   static const String carSolidIcon = "${SvgAssets.svgAssets}car_solid.svg";
   static const String calenderIcon = "${SvgAssets.svgAssets}calendar.svg";

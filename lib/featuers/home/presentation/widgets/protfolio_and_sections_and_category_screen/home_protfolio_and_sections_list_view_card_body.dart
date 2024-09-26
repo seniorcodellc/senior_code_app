@@ -40,6 +40,7 @@ class ProtfolioAndSectionsAndCategoryListViewCardBody extends StatelessWidget {
   final double? spaceBetweenDuartionAndLocation;
   final double? spaceBeforeButtonsFromTop;
   final double? spaceBetweenButtons;
+  final void Function()? cardOnTap;
 
   const ProtfolioAndSectionsAndCategoryListViewCardBody({
     super.key,
@@ -66,67 +67,71 @@ class ProtfolioAndSectionsAndCategoryListViewCardBody extends StatelessWidget {
     this.spaceBeforeButtonsFromTop,
     this.spaceBetweenButtons,
     this.locationIconColor,
+    this.cardOnTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: EdgeInsets.only(
-            right: imageRightPadding?.w ?? 27.w,
+    return GestureDetector(
+      onTap: cardOnTap,
+      child: Row(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(
+              right: imageRightPadding?.w ?? 27.w,
+            ),
+            child: HomeListViewCardImage(
+              projectImagePath: projectImagePath,
+              projectImageWidth: projectImageWidth,
+              projectImageHeight: projectImageHeight,
+            ),
           ),
-          child: HomeListViewCardImage(
-            projectImagePath: projectImagePath,
-            projectImageWidth: projectImageWidth,
-            projectImageHeight: projectImageHeight,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                HomeProtfolioAndSectionsAndCategoryListViewCardTitleAndCategory(
+                    title: title, // Dynamic title
+                    categoryTitle: categoryTitle, // Dynamic category title
+                    titleStyle: titleStyle, // Customizable title style
+                    categoryTitleStyle:
+                        categoryTitleStyle // Customizable category title style
+                    ),
+                spaceBetweenCategoryTitleAndProjectDurationWithLocationWithLocation
+                        ?.vs ??
+                    16.vs,
+                HomeProtfolioAndSectionsAndCategoryListViewCardDurationAndLocationTexts(
+                  locationIconColor: locationIconColor,
+                  spaceBetweenDuartionAndLocation:
+                      spaceBetweenDuartionAndLocation,
+                  projectDuration: projectDuration, // Dynamic project duration
+                  projectLocation: projectLocation, // Dynamic project location
+                  projectDurationStyle:
+                      projectDurationStyle, // Customizable project duration style
+                  projectLocationStyle:
+                      projectLocationStyle, // Customizable project location style
+                ),
+                spaceBeforeButtonsFromTop?.vs ?? 16.vs, // Space before buttons
+                HomeProtfolioAndSectionsAndCategoryListViewCardButtons(
+                  onFirstButtonTap:
+                      onFirstButtonTap, // Callback when first button is tapped
+                  onSecondButtonTap:
+                      onSecondButtonTap, // Callback when second button is tapped
+                  firstButtonText:
+                      firstButtonText, // Customizable first button text
+                  secondButtonText:
+                      secondButtonText, // Customizable second button text
+                  showFirstButton: showFirstButton, // Show or hide first button
+                  showSecondButton:
+                      showSecondButton, // Show or hide second button
+                  spaceBetweenButtons:
+                      spaceBetweenButtons, // Space between buttons
+                ),
+              ],
+            ),
           ),
-        ),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              HomeProtfolioAndSectionsAndCategoryListViewCardTitleAndCategory(
-                  title: title, // Dynamic title
-                  categoryTitle: categoryTitle, // Dynamic category title
-                  titleStyle: titleStyle, // Customizable title style
-                  categoryTitleStyle:
-                      categoryTitleStyle // Customizable category title style
-                  ),
-              spaceBetweenCategoryTitleAndProjectDurationWithLocationWithLocation
-                      ?.vs ??
-                  16.vs,
-              HomeProtfolioAndSectionsAndCategoryListViewCardDurationAndLocationTexts(
-                locationIconColor: locationIconColor,
-                spaceBetweenDuartionAndLocation:
-                    spaceBetweenDuartionAndLocation,
-                projectDuration: projectDuration, // Dynamic project duration
-                projectLocation: projectLocation, // Dynamic project location
-                projectDurationStyle:
-                    projectDurationStyle, // Customizable project duration style
-                projectLocationStyle:
-                    projectLocationStyle, // Customizable project location style
-              ),
-              spaceBeforeButtonsFromTop?.vs ?? 16.vs, // Space before buttons
-              HomeProtfolioAndSectionsAndCategoryListViewCardButtons(
-                onFirstButtonTap:
-                    onFirstButtonTap, // Callback when first button is tapped
-                onSecondButtonTap:
-                    onSecondButtonTap, // Callback when second button is tapped
-                firstButtonText:
-                    firstButtonText, // Customizable first button text
-                secondButtonText:
-                    secondButtonText, // Customizable second button text
-                showFirstButton: showFirstButton, // Show or hide first button
-                showSecondButton:
-                    showSecondButton, // Show or hide second button
-                spaceBetweenButtons:
-                    spaceBetweenButtons, // Space between buttons
-              ),
-            ],
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
