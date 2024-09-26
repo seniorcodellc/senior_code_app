@@ -2,6 +2,7 @@ import 'package:senior_code_app/featuers/contact_us/presentation/screen/contact_
 
 import '../../exports.dart';
 import '../../featuers/aboutUs/presentation/screen/about_us_screen.dart';
+import '../../featuers/home/presentation/screens/category_screen.dart';
 import 'routes_exports.dart';
 
 class Routes {
@@ -17,8 +18,8 @@ class Routes {
   static const String signinRoute = "SigninScreen";
   static const String signupRoute = "SignupScreen";
   static const String verificationRoute = "VerificationScreen";
-    static const String contactUsRoute = "ContactUsScreen";
-
+  static const String contactUsRoute = "ContactUsScreen";
+  static const String categoryRoute = "categoryScreen";
 }
 
 class RouteGenerator {
@@ -66,9 +67,13 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (context) => const AboutUsScreen(),
         );
-        case Routes.contactUsRoute:
+      case Routes.contactUsRoute:
         return MaterialPageRoute(
           builder: (context) => const ContactUsScreen(),
+        );
+      case Routes.categoryRoute:
+        return MaterialPageRoute(
+          builder: (context) => const CategoryScreen(),
         );
       // Default:
       default:

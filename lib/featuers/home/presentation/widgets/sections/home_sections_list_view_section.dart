@@ -1,7 +1,7 @@
 import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../../exports.dart';
-import '../protfolio_and_sections/home_protfolio_and_sections_list_view_item_card.dart';
+import '../protfolio_and_sections_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
 
 class SectionListView extends StatelessWidget {
   final int sectionListViewItemCount;
@@ -9,14 +9,13 @@ class SectionListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: EdgeInsets.only(right: 3.w),
       child: Column(
         children: List.generate(
           sectionListViewItemCount,
           (index) {
-            return const PortfolioAndSectionsListViewItemCard(
+            return const PortfolioAndSectionsAndCategoryListViewItemCard(
               elevation: 3,
               title: 'Real State',
               categoryTitle: 'Mobile App',
@@ -28,7 +27,7 @@ class SectionListView extends StatelessWidget {
               showFirstButton: false,
               showSecondButton: false,
               imageRightPadding: 22,
-              spaceBetweenCategoryTitleAndProjectDuration: 19,
+              spaceBetweenCategoryTitleAndProjectDurationWithLocation: 19,
               spaceBetweenDuartionAndLocation: 20,
             );
           },

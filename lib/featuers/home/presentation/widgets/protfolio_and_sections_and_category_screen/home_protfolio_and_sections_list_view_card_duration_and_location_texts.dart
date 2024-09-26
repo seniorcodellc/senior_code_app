@@ -4,21 +4,24 @@ import '../../../../../core/utils/app_styels.dart';
 import '../../../../../core/widgets/custome_svg_image.dart';
 import '../../../../../exports.dart';
 
-class HomeProtfolioAndSectionsListViewCardDurationAndLocationTexts
+class HomeProtfolioAndSectionsAndCategoryListViewCardDurationAndLocationTexts
     extends StatelessWidget {
   final String projectDuration;
   final TextStyle? projectDurationStyle;
   final double? spaceBetweenDuartionAndLocation;
   final String projectLocation;
   final TextStyle? projectLocationStyle;
+  final Color? locationIconColor;
 
-  const HomeProtfolioAndSectionsListViewCardDurationAndLocationTexts(
-      {super.key,
-      required this.projectDuration,
-      this.projectDurationStyle,
-      this.spaceBetweenDuartionAndLocation,
-      required this.projectLocation,
-      this.projectLocationStyle});
+  const HomeProtfolioAndSectionsAndCategoryListViewCardDurationAndLocationTexts({
+    super.key,
+    required this.projectDuration,
+    this.projectDurationStyle,
+    this.spaceBetweenDuartionAndLocation,
+    required this.projectLocation,
+    this.projectLocationStyle,
+    this.locationIconColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,7 @@ class HomeProtfolioAndSectionsListViewCardDurationAndLocationTexts
               asset: AppAssets.locationIcon,
               height: 24.h,
               width: 24.w,
+              color: locationIconColor,
             ),
             4.hs,
             Text(

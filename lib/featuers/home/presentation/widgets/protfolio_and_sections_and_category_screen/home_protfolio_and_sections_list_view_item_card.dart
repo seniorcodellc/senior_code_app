@@ -3,10 +3,10 @@ import 'package:senior_code_app/exports.dart';
 
 import 'home_protfolio_and_sections_list_view_card_body.dart';
 
-class PortfolioAndSectionsListViewItemCard extends StatelessWidget {
+class PortfolioAndSectionsAndCategoryListViewItemCard extends StatelessWidget {
   final String title;
-  final String categoryTitle;
-  final String projectDuration;
+  final String? categoryTitle;
+  final String? projectDuration;
   final String projectLocation;
   final String projectImagePath;
   final VoidCallback? onFirstButtonTap;
@@ -26,22 +26,27 @@ class PortfolioAndSectionsListViewItemCard extends StatelessWidget {
   final TextStyle? projectLocationStyle;
 
   // Button visibility
-  final bool showFirstButton;
-  final bool showSecondButton;
+  final bool? showFirstButton;
+  final bool? showSecondButton;
   // Padding
   final double? imageRightPadding;
   // Spaces
-  final double? spaceBetweenCategoryTitleAndProjectDuration;
+  final double? spaceBetweenCategoryTitleAndProjectDurationWithLocation;
   final double? spaceBetweenDuartionAndLocation;
   final double? spaceBetweenIconAndLocation;
   final double? spaceBeforeButtonsFromTop;
   final double? spaceBetweenButtons;
+  final Color? cardColor;
+  final Color? locationIconColor;
+  final double? cardLeftPadding;
+  final double? cardBottomPadding;
+  final double? cardTopPadding;
 
-  const PortfolioAndSectionsListViewItemCard({
+  const PortfolioAndSectionsAndCategoryListViewItemCard({
     super.key,
     required this.title,
-    required this.categoryTitle,
-    required this.projectDuration,
+    this.categoryTitle,
+    this.projectDuration,
     required this.projectLocation,
     required this.projectImagePath,
     this.onFirstButtonTap,
@@ -57,41 +62,53 @@ class PortfolioAndSectionsListViewItemCard extends StatelessWidget {
     this.showFirstButton = true, // First button visibility (default is true)
     this.showSecondButton = true, // Second button visibility (default is true)
     this.imageRightPadding,
-    this.spaceBetweenCategoryTitleAndProjectDuration,
+    this.spaceBetweenCategoryTitleAndProjectDurationWithLocation,
     this.spaceBetweenDuartionAndLocation,
     this.spaceBetweenIconAndLocation,
     this.spaceBeforeButtonsFromTop,
-    this.spaceBetweenButtons, this.elevation,
+    this.spaceBetweenButtons,
+    this.elevation,
+    this.cardColor,
+    this.locationIconColor,
+    this.cardLeftPadding,
+    this.cardBottomPadding,
+    this.cardTopPadding,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 12.h), // Flexible padding
+      padding: EdgeInsets.symmetric(
+          vertical: 12.h), // Flexible padding Between cards
       child: Card(
-        elevation: elevation??4,
-        color: AppColors.white,
+        elevation: elevation ?? 4,
+        color: cardColor ?? AppColors.white,
         child: Padding(
           padding: EdgeInsets.only(
-            left: 14.w,
-            top: 24.h,
-            bottom: 21.h,
+            left: cardLeftPadding?.w ?? 14.w,
+            top: cardTopPadding?.h ?? 12.h,
+            bottom: cardBottomPadding?.h ?? 12.h,
           ),
-          child: ProtfolioAndSectionsListViewCardBody(
+          child: ProtfolioAndSectionsAndCategoryListViewCardBody(
+            locationIconColor: locationIconColor,
+            projectImageHeight: projectImageHeight,
+            projectImageWidth: projectImageWidth,
+            titleStyle: titleStyle,
+            projectLocationStyle: projectLocationStyle,
             title: title,
-            categoryTitle: categoryTitle,
-            projectDuration: projectDuration,
+            categoryTitle: categoryTitle ?? "",
+            projectDuration: projectDuration ?? "",
             projectLocation: projectLocation,
             projectImagePath: projectImagePath,
             firstButtonText: firstButtonText,
             secondButtonText: secondButtonText,
             onFirstButtonTap: onFirstButtonTap,
             onSecondButtonTap: onSecondButtonTap,
-            showFirstButton: showFirstButton,
-            showSecondButton: showSecondButton,
+            showFirstButton: showFirstButton ?? false,
+            showSecondButton: showSecondButton ?? false,
             imageRightPadding: imageRightPadding,
-            spaceBetweenCategoryTitleAndProjectDuration:
-                spaceBetweenCategoryTitleAndProjectDuration,
+            spaceBetweenCategoryTitleAndProjectDurationWithLocationWithLocation:
+                spaceBetweenCategoryTitleAndProjectDurationWithLocation,
             spaceBetweenDuartionAndLocation: spaceBetweenDuartionAndLocation,
           ),
         ),

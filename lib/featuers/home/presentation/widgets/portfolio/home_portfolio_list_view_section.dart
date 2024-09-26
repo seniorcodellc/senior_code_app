@@ -1,7 +1,7 @@
 import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../../exports.dart';
-import '../protfolio_and_sections/home_protfolio_and_sections_list_view_item_card.dart';
+import '../protfolio_and_sections_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
 
 class PortfolioListView extends StatelessWidget {
   const PortfolioListView({super.key});
@@ -16,7 +16,7 @@ class PortfolioListView extends StatelessWidget {
         children: List.generate(
           itemCount,
           (index) {
-            return PortfolioAndSectionsListViewItemCard(
+            return PortfolioAndSectionsAndCategoryListViewItemCard(
               title: 'Khedmty',
               categoryTitle: 'Mobile App',
               projectDuration: '3 Weeks',
@@ -26,7 +26,7 @@ class PortfolioListView extends StatelessWidget {
               secondButtonText: 'Admin Panel',
               onFirstButtonTap: () {},
               onSecondButtonTap: () {},
-              spaceBetweenCategoryTitleAndProjectDuration: 30,
+              spaceBetweenCategoryTitleAndProjectDurationWithLocation: 30,
               spaceBetweenDuartionAndLocation: 20,
             );
           },

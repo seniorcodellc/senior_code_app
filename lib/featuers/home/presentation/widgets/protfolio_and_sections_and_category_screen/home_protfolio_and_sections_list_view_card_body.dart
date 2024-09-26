@@ -5,7 +5,7 @@ import 'home_protfolio_and_sections_list_view_card_duration_and_location_texts.d
 import 'home_protfolio_and_sections_list_view_card_image.dart';
 import 'home_protfolio_and_sections_list_view_card_title_and_category.dart';
 
-class ProtfolioAndSectionsListViewCardBody extends StatelessWidget {
+class ProtfolioAndSectionsAndCategoryListViewCardBody extends StatelessWidget {
   final String title;
   final String categoryTitle;
   final String projectDuration;
@@ -32,14 +32,16 @@ class ProtfolioAndSectionsListViewCardBody extends StatelessWidget {
 
   // Padding
   final double? imageRightPadding;
+  final Color? locationIconColor;
 
   // Spaces
-  final double? spaceBetweenCategoryTitleAndProjectDuration;
+  final double?
+      spaceBetweenCategoryTitleAndProjectDurationWithLocationWithLocation;
   final double? spaceBetweenDuartionAndLocation;
   final double? spaceBeforeButtonsFromTop;
   final double? spaceBetweenButtons;
 
-  const ProtfolioAndSectionsListViewCardBody({
+  const ProtfolioAndSectionsAndCategoryListViewCardBody({
     super.key,
     required this.title,
     required this.categoryTitle,
@@ -59,10 +61,11 @@ class ProtfolioAndSectionsListViewCardBody extends StatelessWidget {
     required this.showFirstButton,
     required this.showSecondButton,
     this.imageRightPadding,
-    this.spaceBetweenCategoryTitleAndProjectDuration,
+    this.spaceBetweenCategoryTitleAndProjectDurationWithLocationWithLocation,
     this.spaceBetweenDuartionAndLocation,
     this.spaceBeforeButtonsFromTop,
     this.spaceBetweenButtons,
+    this.locationIconColor,
   });
 
   @override
@@ -83,15 +86,20 @@ class ProtfolioAndSectionsListViewCardBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HomeProtfolioAndSectionsListViewCardTitleAndCategory(
+              HomeProtfolioAndSectionsAndCategoryListViewCardTitleAndCategory(
                   title: title, // Dynamic title
                   categoryTitle: categoryTitle, // Dynamic category title
                   titleStyle: titleStyle, // Customizable title style
                   categoryTitleStyle:
                       categoryTitleStyle // Customizable category title style
                   ),
-              spaceBetweenCategoryTitleAndProjectDuration?.vs ?? 16.vs,
-              HomeProtfolioAndSectionsListViewCardDurationAndLocationTexts(
+              spaceBetweenCategoryTitleAndProjectDurationWithLocationWithLocation
+                      ?.vs ??
+                  16.vs,
+              HomeProtfolioAndSectionsAndCategoryListViewCardDurationAndLocationTexts(
+                locationIconColor: locationIconColor,
+                spaceBetweenDuartionAndLocation:
+                    spaceBetweenDuartionAndLocation,
                 projectDuration: projectDuration, // Dynamic project duration
                 projectLocation: projectLocation, // Dynamic project location
                 projectDurationStyle:
@@ -100,7 +108,7 @@ class ProtfolioAndSectionsListViewCardBody extends StatelessWidget {
                     projectLocationStyle, // Customizable project location style
               ),
               spaceBeforeButtonsFromTop?.vs ?? 16.vs, // Space before buttons
-              HomeProtfolioAndSectionsListViewCardButtons(
+              HomeProtfolioAndSectionsAndCategoryListViewCardButtons(
                 onFirstButtonTap:
                     onFirstButtonTap, // Callback when first button is tapped
                 onSecondButtonTap:

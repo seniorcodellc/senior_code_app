@@ -1,7 +1,7 @@
 import 'package:senior_code_app/core/extensions.dart';
 import 'package:senior_code_app/exports.dart';
 
-import 'home_category_background_and_text_and_button.dart';
+import 'home_background_and_text_and_button.dart';
 
 class WomanAndTextBlueStack extends StatelessWidget {
   const WomanAndTextBlueStack({super.key});
@@ -18,7 +18,7 @@ class WomanAndTextBlueStack extends StatelessWidget {
           alignment: Alignment.bottomCenter,
           // Aligns the children of the stack to the bottom center.
           children: [
-            const HomeCategoryBackgroundAndTextAndButton(),
+            const HomeBackgroundAndTextAndButton(),
             Positioned(
               // Positions a widget relative to its parent stack.
               right: 8.w,

@@ -2,10 +2,10 @@ import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../config/routes/app_routes.dart';
 import '../../../../exports.dart';
-import 'category/home_category_and_text_dark_blue_stack_section.dart';
+import 'home_text_dark_blue_stack_section.dart';
 import 'category/home_category_list_view_section.dart';
 import 'category/home_category_text_section.dart';
-import 'protfolio_and_sections/home_protfolio_and_sections_see_all_section.dart';
+import 'protfolio_and_sections_and_category_screen/home_protfolio_and_sections_see_all_section.dart';
 import 'home_top_name_and_abours_us_bar.dart';
 import 'portfolio/home_portfolio_list_view_section.dart';
 import 'sections/home_sections_list_view_section.dart';

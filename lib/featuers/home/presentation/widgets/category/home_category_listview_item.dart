@@ -1,6 +1,7 @@
 import 'package:senior_code_app/core/extensions.dart';
 import 'package:senior_code_app/core/utils/app_styels.dart';
 
+import '../../../../../config/routes/app_routes.dart';
 import '../../../../../exports.dart';
 
 class CategoryListViewItem extends StatelessWidget {
@@ -26,13 +27,21 @@ class CategoryListViewItem extends StatelessWidget {
       // 24.w units.
       child: Column(
         children: [
-          CircleAvatar(
-            radius: 48.r,
-            backgroundColor: AppColors.lightBlue,
-            child: Image.asset(
-              AppAssets.firstHomeCategory,
-              height: 90.h,
-              width: 90.w,
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                Routes.categoryRoute,
+              );
+            },
+            child: CircleAvatar(
+              radius: 48.r,
+              backgroundColor: AppColors.lightBlue,
+              child: Image.asset(
+                AppAssets.firstHomeCategory,
+                height: 90.h,
+                width: 90.w,
+              ),
             ),
           ),
           12.5.vs,

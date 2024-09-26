@@ -1,6 +1,6 @@
 import 'package:senior_code_app/core/extensions.dart';
 import '../../../../exports.dart';
-import 'abou_us_images_section.dart';
+import 'about_us_images_section.dart';
 import 'about_us_bar_and_icon_section.dart';
 import 'about_us_text_section.dart';
 

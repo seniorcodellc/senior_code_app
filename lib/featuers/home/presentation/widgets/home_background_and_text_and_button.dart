@@ -1,11 +1,11 @@
 import 'package:senior_code_app/config/routes/app_routes.dart';
 import 'package:senior_code_app/core/extensions.dart';
 
-import '../../../../../core/utils/app_styels.dart';
-import '../../../../../exports.dart';
+import '../../../../core/utils/app_styels.dart';
+import '../../../../exports.dart';
 
-class HomeCategoryBackgroundAndTextAndButton extends StatelessWidget {
-  const HomeCategoryBackgroundAndTextAndButton({super.key});
+class HomeBackgroundAndTextAndButton extends StatelessWidget {
+  const HomeBackgroundAndTextAndButton({super.key});
 
   @override
   Widget build(BuildContext context) {

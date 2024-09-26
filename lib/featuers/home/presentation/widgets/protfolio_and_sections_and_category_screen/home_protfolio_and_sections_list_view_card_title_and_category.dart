@@ -1,14 +1,14 @@
 import '../../../../../core/utils/app_styels.dart';
 import '../../../../../exports.dart';
 
-class HomeProtfolioAndSectionsListViewCardTitleAndCategory
+class HomeProtfolioAndSectionsAndCategoryListViewCardTitleAndCategory
     extends StatelessWidget {
   final String title;
   final String categoryTitle;
   // Styles
   final TextStyle? titleStyle;
   final TextStyle? categoryTitleStyle;
-  const HomeProtfolioAndSectionsListViewCardTitleAndCategory(
+  const HomeProtfolioAndSectionsAndCategoryListViewCardTitleAndCategory(
       {super.key,
       required this.title,
       required this.categoryTitle,
