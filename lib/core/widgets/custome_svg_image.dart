@@ -1,7 +1,8 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:senior_code_app/core/extensions.dart';
+
+import '../../exports.dart';
 
 class CustomSVGImage extends StatelessWidget {
   const CustomSVGImage({
@@ -10,7 +11,9 @@ class CustomSVGImage extends StatelessWidget {
     this.matchTextDirection = true,
     this.color,
     this.fit = BoxFit.contain,
-    this.onTap, this.width, this.height,
+    this.onTap,
+    this.width,
+    this.height,
   });
   final double? width;
   final double? height;
@@ -33,8 +36,8 @@ class CustomSVGImage extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SvgPicture.asset(
-        width: width,
-        height: height,
+        width: width?.w ?? 0,
+        height: height?.h ?? 0,
         asset,
         color: color,
         fit: fit,

@@ -1,3 +1,5 @@
+import 'package:senior_code_app/featuers/contact_us/presentation/screen/contact_us_screen.dart';
+
 import '../../exports.dart';
 import '../../featuers/aboutUs/presentation/screen/about_us_screen.dart';
 import 'routes_exports.dart';
@@ -15,6 +17,8 @@ class Routes {
   static const String signinRoute = "SigninScreen";
   static const String signupRoute = "SignupScreen";
   static const String verificationRoute = "VerificationScreen";
+    static const String contactUsRoute = "ContactUsScreen";
+
 }
 
 class RouteGenerator {
@@ -61,6 +65,10 @@ class RouteGenerator {
       case Routes.aboutUsRoute:
         return MaterialPageRoute(
           builder: (context) => const AboutUsScreen(),
+        );
+        case Routes.contactUsRoute:
+        return MaterialPageRoute(
+          builder: (context) => const ContactUsScreen(),
         );
       // Default:
       default:

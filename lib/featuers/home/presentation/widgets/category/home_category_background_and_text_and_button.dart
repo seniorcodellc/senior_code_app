@@ -1,3 +1,4 @@
+import 'package:senior_code_app/config/routes/app_routes.dart';
 import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../../core/utils/app_styels.dart';
@@ -58,7 +59,9 @@ class HomeCategoryBackgroundAndTextAndButton extends StatelessWidget {
           Expanded(
             // Expands the button to fill available space.
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.popAndPushNamed(context, Routes.contactUsRoute);
+              },
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(90.w, 26.h),
                 backgroundColor: Colors.white,

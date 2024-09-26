@@ -90,7 +90,6 @@ class AppAssets with PngAssets, SvgAssets, VideoAssets {
   static const String rectangleIcon = "${SvgAssets.svgAssets}rectangle.svg";
   static const String backIcon = "${SvgAssets.svgAssets}arrow-left.svg";
   static const String starIcon = "${SvgAssets.svgAssets}star.svg";
-  static const String phoneIcon = "${SvgAssets.svgAssets}phone.svg";
   static const String carTripIcon = "${SvgAssets.svgAssets}car_trips.svg";
   static const String userIcon = "${SvgAssets.svgAssets}user.svg";
   static const String arrowDownIcon = "${SvgAssets.svgAssets}arrow-down.svg";
@@ -160,6 +159,10 @@ class AppAssets with PngAssets, SvgAssets, VideoAssets {
   static const String reviewsIcon = "${SvgAssets.svgAssets}reviews.svg";
   static const String verticalLineIcon =
       "${SvgAssets.svgAssets}vertical_line.svg";
+  static const String phoneIcon = "${SvgAssets.svgAssets}phone.svg";
+  static const String emailIcon = "${SvgAssets.svgAssets}email.svg";
+  static const String linkedinIcon = "${SvgAssets.svgAssets}linkdin.svg";
+  static const String whatsappIcon = "${SvgAssets.svgAssets}whatsapp.svg";
 
   // Video Assets
   static const String testOnBoardingVideo =
