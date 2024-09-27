@@ -1,11 +1,13 @@
 import 'package:senior_code_app/core/extensions.dart';
 
-import '../../../../../../exports.dart';
-import '../../protfolio_and_sections_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
+import '../../../../exports.dart';
+import 'protfolio_widgets_and_sections_widgets_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
 
-class SectionListView extends StatelessWidget {
+class HomeGeneralListViewSection extends StatelessWidget {
+  //! Section List View Without Buttons
   final int sectionListViewItemCount;
-  const SectionListView({super.key, required this.sectionListViewItemCount});
+  const HomeGeneralListViewSection(
+      {super.key, required this.sectionListViewItemCount});
 
   @override
   Widget build(BuildContext context) {

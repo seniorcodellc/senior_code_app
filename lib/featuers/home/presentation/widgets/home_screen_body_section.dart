@@ -5,10 +5,10 @@ import '../../../../exports.dart';
 import 'home_text_dark_blue_stack_section.dart';
 import 'category/home_related_widgets/home_category_list_view_section.dart';
 import 'category/home_related_widgets/home_category_text_section.dart';
-import 'protfolio_and_sections_and_category_screen/home_protfolio_and_sections_see_all_section.dart';
-import 'home_top_name_and_abours_us_bar.dart';
-import 'portfolio/home_portfolio_list_view_section.dart';
-import 'sections/screen_related_widgets/home_sections_list_view_section.dart';
+import 'protfolio_widgets_and_sections_widgets_and_category_screen/home_protfolio_and_sections_see_all_section.dart';
+import 'home_top_name_and_about_us_bar.dart';
+import 'portfolio/home_related_widgets/home_portfolio_list_view_section.dart';
+import 'home_general_list_view_section.dart';
 import 'statistics/statistics_grid_section.dart';
 
 class HomeScreenBodySection extends StatelessWidget {
@@ -28,11 +28,13 @@ class HomeScreenBodySection extends StatelessWidget {
         const CategoryListView(),
         58.vs,
         HomeSeeAll(
-          seeAllOnTap: () {},
+          seeAllOnTap: () {
+            Navigator.pushNamed(context, Routes.portfolioRoute);
+          },
           textData: 'Portfolio',
         ),
         20.vs,
-        const PortfolioListView(),
+        const PortfolioListViewSection(),
         73.vs,
         HomeSeeAll(
           seeAllOnTap: () {
@@ -41,7 +43,9 @@ class HomeScreenBodySection extends StatelessWidget {
           textData: 'Sections',
         ),
         8.vs,
-        const SectionListView(sectionListViewItemCount: 1,),
+        const HomeGeneralListViewSection(
+          sectionListViewItemCount: 1,
+        ),
         64.vs,
         const StatisticsGridSection(),
       ],

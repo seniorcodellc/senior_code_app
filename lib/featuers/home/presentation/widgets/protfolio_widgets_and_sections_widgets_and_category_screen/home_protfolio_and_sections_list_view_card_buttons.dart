@@ -1,7 +1,7 @@
 import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../../exports.dart';
-import '../portfolio/home_protfolio_button.dart';
+import '../portfolio/home_related_widgets/home_protfolio_button.dart';
 
 class HomeProtfolioAndSectionsAndCategoryListViewCardButtons
     extends StatelessWidget {
@@ -27,7 +27,7 @@ class HomeProtfolioAndSectionsAndCategoryListViewCardButtons
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         if (showFirstButton &&
             firstButtonText != null &&

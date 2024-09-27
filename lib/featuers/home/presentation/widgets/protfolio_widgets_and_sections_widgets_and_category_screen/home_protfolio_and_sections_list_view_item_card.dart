@@ -41,8 +41,7 @@ class PortfolioAndSectionsAndCategoryListViewItemCard extends StatelessWidget {
   final double? cardLeftPadding;
   final double? cardBottomPadding;
   final double? cardTopPadding;
-    final void Function()? cardOnTap;
-
+  final void Function()? cardOnTap;
 
   const PortfolioAndSectionsAndCategoryListViewItemCard({
     super.key,
@@ -74,14 +73,16 @@ class PortfolioAndSectionsAndCategoryListViewItemCard extends StatelessWidget {
     this.locationIconColor,
     this.cardLeftPadding,
     this.cardBottomPadding,
-    this.cardTopPadding, this.cardOnTap,
+    this.cardTopPadding,
+    this.cardOnTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-          vertical: 12.h,), // Flexible padding Between cards
+        vertical: 12.h,
+      ), // Flexible padding Between cards
       child: Card(
         elevation: elevation ?? 4,
         color: cardColor ?? AppColors.white,

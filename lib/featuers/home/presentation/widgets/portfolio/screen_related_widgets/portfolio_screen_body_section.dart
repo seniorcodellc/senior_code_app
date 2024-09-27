@@ -2,10 +2,10 @@ import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../../../exports.dart';
 import '../../../../../../core/widgets/home_and_related_screens_custom_app_bar.dart';
-import '../screen_related_widgets/home_sections_list_view_section.dart';
+import '../home_related_widgets/home_portfolio_list_view_section.dart';
 
-class SectionsScreenBodySection extends StatelessWidget {
-  const SectionsScreenBodySection({super.key});
+class PortfolioScreenBodySection extends StatelessWidget {
+  const PortfolioScreenBodySection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,12 +13,10 @@ class SectionsScreenBodySection extends StatelessWidget {
       children: [
         28.vs,
         const HomeAndRelatedScreensCustomAppBar(
-          homeCustomAppBarTextData: 'Sections',
+          homeCustomAppBarTextData: 'Portfolio',
         ),
         46.vs,
-        const SectionListView(
-          sectionListViewItemCount: 7,
-        ),
+        const PortfolioListViewSection(),
       ],
     );
   }

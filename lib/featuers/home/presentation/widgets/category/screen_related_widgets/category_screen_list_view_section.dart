@@ -1,7 +1,7 @@
 import '../../../../../../config/routes/app_routes.dart';
 import '../../../../../../core/utils/app_styels.dart';
 import '../../../../../../exports.dart';
-import '../../protfolio_and_sections_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
+import '../../protfolio_widgets_and_sections_widgets_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
 
 class CategoryListViewSection extends StatelessWidget {
   final int categoryListViewItemCount;

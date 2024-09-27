@@ -1,7 +1,7 @@
 import 'package:senior_code_app/core/extensions.dart';
 import 'package:senior_code_app/exports.dart';
 
-import '../widgets/sections/home_related_widgets/sections_screen_body_section.dart';
+import '../../widgets/sections/screen_related_widgets/sections_screen_body_section.dart';
 
 class SectionsScreen extends StatelessWidget {
   const SectionsScreen({super.key});

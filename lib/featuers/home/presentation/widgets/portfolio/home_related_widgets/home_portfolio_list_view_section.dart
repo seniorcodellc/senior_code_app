@@ -1,10 +1,11 @@
 import 'package:senior_code_app/core/extensions.dart';
 
-import '../../../../../exports.dart';
-import '../protfolio_and_sections_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
+import '../../../../../../exports.dart';
+import '../../protfolio_widgets_and_sections_widgets_and_category_screen/home_protfolio_and_sections_list_view_item_card.dart';
 
-class PortfolioListView extends StatelessWidget {
-  const PortfolioListView({super.key});
+class PortfolioListViewSection extends StatelessWidget {
+  //! Section List View With Buttons
+  const PortfolioListViewSection({super.key});
 
   @override
   Widget build(BuildContext context) {

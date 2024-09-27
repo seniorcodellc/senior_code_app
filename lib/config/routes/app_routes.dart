@@ -1,3 +1,4 @@
+import 'package:senior_code_app/featuers/home/presentation/screens/related_home_screens/portfolio_screen.dart';
 
 import '../../exports.dart';
 
@@ -18,8 +19,8 @@ class Routes {
   static const String verificationRoute = "VerificationScreen";
   static const String contactUsRoute = "ContactUsScreen";
   static const String categoryRoute = "CategoryScreen";
-    static const String categoryDetailsRoute = "CategoryDetailsScreen";
-
+  static const String categoryDetailsRoute = "CategoryDetailsScreen";
+  static const String portfolioRoute = "PortfolioScreen";
 }
 
 class RouteGenerator {
@@ -75,9 +76,13 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (context) => const CategoryScreen(),
         );
-           case Routes.categoryDetailsRoute:
+      case Routes.categoryDetailsRoute:
         return MaterialPageRoute(
           builder: (context) => const CategoryDetailsScreen(),
+        );
+      case Routes.portfolioRoute:
+        return MaterialPageRoute(
+          builder: (context) => const PortfolioScreen(),
         );
       // Default:
       default:
