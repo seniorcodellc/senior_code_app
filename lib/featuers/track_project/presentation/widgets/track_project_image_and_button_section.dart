@@ -1,5 +1,6 @@
 import 'package:senior_code_app/core/extensions.dart';
 
+import '../../../../config/routes/app_routes.dart';
 import '../../../../core/utils/app_styels.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../../../../core/widgets/custom_image_provider_from_assets.dart';
@@ -27,7 +28,12 @@ class TrackProjectImageAndButtonSection extends StatelessWidget {
             color: AppColors.white,
             fontFamily: FontFamilies.interFamily,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(
+              context,
+              Routes.trackingRoute,
+            );
+          },
         ),
       ],
     );

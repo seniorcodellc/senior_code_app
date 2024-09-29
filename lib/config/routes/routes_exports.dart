@@ -10,3 +10,6 @@ export 'package:senior_code_app/featuers/contact_us/presentation/screen/contact_
 export '../../featuers/aboutUs/presentation/screen/about_us_screen.dart';
 export '../../featuers/category_details/presentation/screen/category_details_screen.dart';
 export '../../featuers/home/presentation/screens/related_home_screens/category_screen.dart';
+export 'package:senior_code_app/featuers/home/presentation/screens/related_home_screens/portfolio_screen.dart';
+export '../../featuers/track_project/presentation/screen/track_project_screen.dart';
+export '../../featuers/tracking/presentation/screens/tracking_screen.dart';
