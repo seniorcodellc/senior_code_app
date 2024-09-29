@@ -17,7 +17,6 @@ class AppAssets with PngAssets, SvgAssets, VideoAssets {
   static const String carPlateImage = "${PngAssets.pngAssets}car_plate.png";
   static const String locationImage = "${PngAssets.pngAssets}location.png";
   static const String searchImage = "${PngAssets.pngAssets}search.png";
-  static const String userImage = "${PngAssets.pngAssets}userimage.png";
   static const String englishFlagImage = "${PngAssets.pngAssets}english.png";
   static const String arabicFlagImage = "${PngAssets.pngAssets}arabic.png";
   static const String tripiaAppIconImage =
@@ -91,6 +90,10 @@ class AppAssets with PngAssets, SvgAssets, VideoAssets {
       "${PngAssets.pngAssets}fatto_product.png";
   static const String fattoProduct35Image =
       "${PngAssets.pngAssets}fatto_product35.png";
+      static const String userImage =
+      "${PngAssets.pngAssets}user_image.png";
+        static const String projectTrackingImage =
+      "${PngAssets.pngAssets}project_tracking_image.png";
   // Icons SVG
   static const String carSolidIcon = "${SvgAssets.svgAssets}car_solid.svg";
   static const String calenderIcon = "${SvgAssets.svgAssets}calendar.svg";

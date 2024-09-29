@@ -1,5 +1,4 @@
 import 'package:senior_code_app/core/extensions.dart';
-
 import '../../../../config/routes/app_routes.dart';
 import '../../../../exports.dart';
 import 'home_text_dark_blue_stack_section.dart';
@@ -10,6 +9,7 @@ import 'home_top_name_and_about_us_bar.dart';
 import 'portfolio/home_related_widgets/home_portfolio_list_view_section.dart';
 import 'home_general_list_view_section.dart';
 import 'statistics/statistics_grid_section.dart';
+import 'track_project_button.dart';
 
 class HomeScreenBodySection extends StatelessWidget {
   const HomeScreenBodySection({super.key});
@@ -20,7 +20,8 @@ class HomeScreenBodySection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const HomeTopNameAndAboutUsBar(),
-        17.vs,
+        16.vs,
+        const TrackProjectButton(),
         const WomanAndTextBlueStack(),
         24.vs,
         const CategoryText(),

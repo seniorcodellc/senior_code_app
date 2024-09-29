@@ -2,6 +2,7 @@ import 'package:senior_code_app/featuers/home/presentation/screens/related_home_
 
 import '../../exports.dart';
 
+import '../../featuers/track_project/presentation/screen/track_project_screen.dart';
 import 'routes_exports.dart';
 
 class Routes {
@@ -21,6 +22,8 @@ class Routes {
   static const String categoryRoute = "CategoryScreen";
   static const String categoryDetailsRoute = "CategoryDetailsScreen";
   static const String portfolioRoute = "PortfolioScreen";
+    static const String trackProjectRoute = "TrackProjectScreen";
+
 }
 
 class RouteGenerator {
@@ -83,6 +86,10 @@ class RouteGenerator {
       case Routes.portfolioRoute:
         return MaterialPageRoute(
           builder: (context) => const PortfolioScreen(),
+        );
+         case Routes.trackProjectRoute:
+        return MaterialPageRoute(
+          builder: (context) => const TrackProjectScreen(),
         );
       // Default:
       default:

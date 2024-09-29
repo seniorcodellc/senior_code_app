@@ -51,6 +51,8 @@ class AppColors {
   static const Color grayBlue = Color(0xFF546E7A);
   static const Color green = Color(0xFF569F63);
   static const Color borderColor = Color(0xFFE2E8F0);
+    static const Color dustyTaupeColor = Color(0xFF948F8F);
+
 
   ///////////////////////////////////////////////
 

@@ -57,7 +57,8 @@ class AppTextButton extends StatelessWidget {
           EdgeInsets.symmetric(
             horizontal: horizontalPadding?.w ?? 12.w,
             vertical: verticalPadding?.h ?? 14.h,
-          ),),
+          ),
+        ),
         //   // padding: WidgetStateProperty.all<EdgeInsets>(...): Sets the padding
         //   //inside the button. If horizontalPadding or verticalPadding are not
         //   // provided, they default to 12.w and 14.h respectively.
@@ -68,8 +69,8 @@ class AppTextButton extends StatelessWidget {
             buttonHeight?.h ?? 50.h,
           ),
         ),
-        // fixedSize: WidgetStateProperty.all(...): Sets the fixed size of the 
-        //button. If buttonWidth or buttonHeight are not provided, they default 
+        // fixedSize: WidgetStateProperty.all(...): Sets the fixed size of the
+        //button. If buttonWidth or buttonHeight are not provided, they default
         //to double.maxFinite and 50.h respectively.
       ),
       onPressed: onPressed,
@@ -78,6 +79,7 @@ class AppTextButton extends StatelessWidget {
       child: Text(
         buttonText,
         style: textStyle,
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }
