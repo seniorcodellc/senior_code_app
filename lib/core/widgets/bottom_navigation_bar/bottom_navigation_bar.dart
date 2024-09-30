@@ -1,9 +1,10 @@
 // bottom_navigation_bar.dart
 import 'package:flutter/material.dart';
 import 'package:senior_code_app/exports.dart';
+import 'package:senior_code_app/featuers/my_account/presentation/screen/my_account_screen.dart';
 import '../../../featuers/home/presentation/screens/home_screen.dart';
 import '../../../featuers/reservation/presentation/screen/reservation_screen.dart';
-import 'bottom_navigation_bar_body.dart'; // Import the new BottomNavBarBody widget
+import 'bottom_navigation_bar_body.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({super.key});
@@ -18,7 +19,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 
   // List of screens for each tab
   final List<Widget> screens = [
-    const ProfileScreen(),
+    const MyAccountScreen(),
     const ReservationScreen(),
     const HomeScreen(),
     const ReviewsScreen(),
@@ -44,19 +45,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 }
 
 //! This screens will be removed in the next commits of the project...
-// Profile Screen
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Profile Screen',
-      ),
-    );
-  }
-}
+
 // Reviews Screen
 class ReviewsScreen extends StatelessWidget {
   const ReviewsScreen({super.key});

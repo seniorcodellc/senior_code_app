@@ -58,6 +58,8 @@ class AppColors {
 
   // static Color descColor = '#878787'.colorFromString;
   static const Color descColor = Color(0xFF878787);
+    static const Color crimsonRedColor = Color(0xFFED2241);
+
   static const Color black = Colors.black;
   static const Color deepGray = Color(0xFF263238);
   static const Color red = Colors.red;
