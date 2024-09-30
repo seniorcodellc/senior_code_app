@@ -1,9 +1,9 @@
 import 'package:senior_code_app/core/extensions.dart';
 import '../../../../exports.dart';
 import 'my_account_app_bar_section.dart';
-import 'my_account_genral_list_tiles_and_text.dart';
-import 'my_account_logout_button.dart';
-import 'my_account_user_image_and_name_and_email.dart';
+import 'my_account_genral_list_tiles_and_text_section.dart';
+import 'my_account_logout_button_section.dart';
+import 'my_account_user_image_and_name_and_email_section.dart';
 
 class MyAccountScreenBodySection extends StatelessWidget {
   const MyAccountScreenBodySection({super.key});
