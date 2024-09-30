@@ -90,11 +90,10 @@ class AppAssets with PngAssets, SvgAssets, VideoAssets {
       "${PngAssets.pngAssets}fatto_product.png";
   static const String fattoProduct35Image =
       "${PngAssets.pngAssets}fatto_product35.png";
-      static const String userImage =
-      "${PngAssets.pngAssets}user_image.png";
-        static const String projectTrackingImage =
+  static const String userImage = "${PngAssets.pngAssets}user_image.png";
+  static const String projectTrackingImage =
       "${PngAssets.pngAssets}project_tracking_image.png";
-              static const String kararSatImage =
+  static const String kararSatImage =
       "${PngAssets.pngAssets}karar_sat_image.png";
   // Icons SVG
   static const String carSolidIcon = "${SvgAssets.svgAssets}car_solid.svg";
@@ -187,12 +186,15 @@ class AppAssets with PngAssets, SvgAssets, VideoAssets {
   static const String linkedinIcon = "${SvgAssets.svgAssets}linkdin.svg";
   static const String whatsappIcon = "${SvgAssets.svgAssets}whatsapp.svg";
 
-    static const String changePasswordIcon = "${SvgAssets.svgAssets}change_password.svg";
-  static const String editProfileIcon = "${SvgAssets.svgAssets}edit_profile.svg";
+  static const String changePasswordIcon =
+      "${SvgAssets.svgAssets}change_password.svg";
+  static const String editProfileIcon =
+      "${SvgAssets.svgAssets}edit_profile.svg";
   static const String languageIcon = "${SvgAssets.svgAssets}language.svg";
   static const String termsIcon = "${SvgAssets.svgAssets}terms.svg";
   static const String logOutIcon = "${SvgAssets.svgAssets}logout.svg";
-
+  static const String emailProfileIcon =
+      "${SvgAssets.svgAssets}email_profile.svg";
 
   // Video Assets
   static const String testOnBoardingVideo =

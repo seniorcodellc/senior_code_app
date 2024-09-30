@@ -1,4 +1,3 @@
-import 'package:senior_code_app/featuers/my_account/presentation/screen/my_account_screen.dart';
 
 import '../../exports.dart';
 
@@ -24,6 +23,7 @@ class Routes {
   static const String trackProjectRoute = "TrackProjectScreen";
   static const String trackingRoute = "TrackingScreen";
   static const String myAccountRoute = "MyAccountScreen";
+  static const String editProfileRoute = "EditProfileScreen";
 }
 
 class RouteGenerator {
@@ -95,9 +95,15 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (context) => const TrackingScreen(),
         );
+      // ! profile routes
       case Routes.myAccountRoute:
         return MaterialPageRoute(
           builder: (context) => const MyAccountScreen(),
+        );
+      // ! Profile Related Routes
+      case Routes.editProfileRoute:
+        return MaterialPageRoute(
+          builder: (context) => const EditProfileScreen(),
         );
       // Default:
       default:

@@ -51,14 +51,13 @@ class AppColors {
   static const Color grayBlue = Color(0xFF546E7A);
   static const Color green = Color(0xFF569F63);
   static const Color borderColor = Color(0xFFE2E8F0);
-    static const Color dustyTaupeColor = Color(0xFF948F8F);
-
+  static const Color dustyTaupeColor = Color(0xFF948F8F);
 
   ///////////////////////////////////////////////
 
   // static Color descColor = '#878787'.colorFromString;
   static const Color descColor = Color(0xFF878787);
-    static const Color crimsonRedColor = Color(0xFFED2241);
+  static const Color crimsonRedColor = Color(0xFFED2241);
 
   static const Color black = Colors.black;
   static const Color deepGray = Color(0xFF263238);
@@ -174,4 +173,5 @@ class AppColors {
   static const Color regularWhiteColor = Color(0xffFAFAFA);
   static const Color shadowColor3 = Color(0xff666666);
   static const Color lightBlueColor = Color(0xff4E88B3);
+  static const Color slateGrayColor = Color(0xff6B7280);
 }

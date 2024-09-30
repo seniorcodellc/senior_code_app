@@ -2,6 +2,7 @@ import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../core/widgets/custome_svg_image.dart';
 import '../../../../exports.dart';
+import '../../../../core/widgets/field_calender_icon.dart';
 
 class ReservationTextFormLineCalenderArrowSection extends StatelessWidget {
   const ReservationTextFormLineCalenderArrowSection({super.key});
@@ -22,11 +23,7 @@ class ReservationTextFormLineCalenderArrowSection extends StatelessWidget {
             height: 24,
           ),
         ),
-        Icon(
-          Icons.calendar_today_outlined,
-          color: AppColors.white,
-          size: 24.r,
-        ),
+        const FieldCalenderIcon(),
         Padding(
           padding: EdgeInsetsDirectional.only(
             start: 9.w,

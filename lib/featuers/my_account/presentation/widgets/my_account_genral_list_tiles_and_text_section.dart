@@ -1,5 +1,6 @@
 import 'package:senior_code_app/core/extensions.dart';
 
+import '../../../../config/routes/app_routes.dart';
 import '../../../../core/utils/app_styels.dart';
 import '../../../../core/widgets/custome_svg_image.dart';
 import '../../../../exports.dart';
@@ -37,7 +38,12 @@ class MyAccountGenralListTilesAndText extends StatelessWidget {
               fontFamily: FontFamilies.fontFamilyNunitoSans,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              Routes.editProfileRoute,
+            );
+          },
           trailing: const Icon(
             Icons.keyboard_arrow_right,
             color: AppColors.white,

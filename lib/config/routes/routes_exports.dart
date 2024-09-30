@@ -13,3 +13,5 @@ export '../../featuers/home/presentation/screens/related_home_screens/category_s
 export 'package:senior_code_app/featuers/home/presentation/screens/related_home_screens/portfolio_screen.dart';
 export '../../featuers/track_project/presentation/screen/track_project_screen.dart';
 export '../../featuers/tracking/presentation/screens/tracking_screen.dart';
+export 'package:senior_code_app/featuers/my_account/presentation/screen/my_account_screen.dart';
+export '../../featuers/edit_profile.dart/presentation/screen/edit_profile_screen.dart';

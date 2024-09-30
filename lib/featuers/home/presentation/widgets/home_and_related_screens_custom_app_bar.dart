@@ -1,8 +1,8 @@
 import 'package:senior_code_app/core/extensions.dart';
 
-import '../utils/app_styels.dart';
-import 'senior_code_app_bar.dart';
-import '../../exports.dart';
+import '../../../../core/utils/app_styels.dart';
+import '../../../../core/widgets/senior_code_app_bar.dart';
+import '../../../../exports.dart';
 
 class HomeAndRelatedScreensCustomAppBar extends StatelessWidget {
   final double? homeCustomAppBarHorizontalPadding;
