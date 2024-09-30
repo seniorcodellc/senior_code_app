@@ -1,4 +1,3 @@
-
 import '../../exports.dart';
 
 import 'routes_exports.dart';
@@ -24,6 +23,7 @@ class Routes {
   static const String trackingRoute = "TrackingScreen";
   static const String myAccountRoute = "MyAccountScreen";
   static const String editProfileRoute = "EditProfileScreen";
+  static const String changePasswordRoute = "ChangePasswordScreen";
 }
 
 class RouteGenerator {
@@ -104,6 +104,10 @@ class RouteGenerator {
       case Routes.editProfileRoute:
         return MaterialPageRoute(
           builder: (context) => const EditProfileScreen(),
+        );
+      case Routes.changePasswordRoute:
+        return MaterialPageRoute(
+          builder: (context) => const ChangePasswordScreen(),
         );
       // Default:
       default:

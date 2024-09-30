@@ -28,10 +28,10 @@ class AppTextFormField extends StatelessWidget {
   // final Function(String?) validator;
   final Color? enabledBorderSideColor;
   final Color? focusdBorderColor;
-
   final int? radius;
   final String? labelText;
   final TextStyle? labelStyle;
+  final Color? cursorColor;
   const AppTextFormField({
     super.key,
     this.contentPadding,
@@ -48,7 +48,7 @@ class AppTextFormField extends StatelessWidget {
     this.enabledBorderSideColor,
     this.labelText,
     this.labelStyle,
-    this.focusdBorderColor,
+    this.focusdBorderColor, this.cursorColor,
   });
 
   @override
@@ -84,7 +84,7 @@ class AppTextFormField extends StatelessWidget {
                 radius.r,
               ),
               borderSide: BorderSide(
-                color:focusdBorderColor?? AppColors.primaryColor,
+                color: focusdBorderColor ?? AppColors.primaryColor,
                 width: 1.3.w,
               ),
             ),
@@ -135,7 +135,7 @@ class AppTextFormField extends StatelessWidget {
         // focusedErrorBorder set the border styles when there is a validation
         // error.
       ),
-      cursorColor: AppColors.primaryColor,
+      cursorColor: cursorColor ?? AppColors.primaryColor,
       // cursorColor: Sets the color of the cursor to the primary blue color.
       obscureText: isObscureText ?? false,
       // obscureText: Uses the provided isObscureText value or defaults to false.
