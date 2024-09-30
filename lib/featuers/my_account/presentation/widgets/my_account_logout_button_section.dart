@@ -1,5 +1,4 @@
 import 'package:senior_code_app/core/extensions.dart';
-
 import '../../../../core/utils/app_styels.dart';
 import '../../../../core/widgets/custome_svg_image.dart';
 import '../../../../exports.dart';
