@@ -16,3 +16,4 @@ export '../../featuers/tracking/presentation/screens/tracking_screen.dart';
 export 'package:senior_code_app/featuers/my_account/presentation/screen/my_account_screen.dart';
 export '../../featuers/edit_profile.dart/presentation/screen/edit_profile_screen.dart';
 export '../../featuers/change_password/presentation/screens/change_password_screen.dart';
+export '../../featuers/terms_conditions/presentation/screens/terms_and_conditions_screen.dart';

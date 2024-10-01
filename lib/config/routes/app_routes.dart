@@ -24,6 +24,7 @@ class Routes {
   static const String myAccountRoute = "MyAccountScreen";
   static const String editProfileRoute = "EditProfileScreen";
   static const String changePasswordRoute = "ChangePasswordScreen";
+  static const String termsAndConditionsRoute = "TermsAndConditionsScreen";
 }
 
 class RouteGenerator {
@@ -108,6 +109,10 @@ class RouteGenerator {
       case Routes.changePasswordRoute:
         return MaterialPageRoute(
           builder: (context) => const ChangePasswordScreen(),
+        );
+      case Routes.termsAndConditionsRoute:
+        return MaterialPageRoute(
+          builder: (context) => const TermsAndConditionsScreen(),
         );
       // Default:
       default:

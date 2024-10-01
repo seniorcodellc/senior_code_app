@@ -125,7 +125,12 @@ class MyAccountGenralListTilesAndText extends StatelessWidget {
               fontFamily: FontFamilies.fontFamilyNunitoSans,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              Routes.termsAndConditionsRoute,
+            );
+          },
           trailing: const Icon(
             Icons.keyboard_arrow_right,
             color: AppColors.white,
