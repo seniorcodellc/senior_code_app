@@ -165,6 +165,8 @@ class AppColors {
 
   static const Color mediumGray = Color(0xFF2C2C2C);
   static const Color mediumWhite = Color(0xFFE7ECEF);
+    static const Color amber = Colors.amber;
+
 
 ////////////////////////////////////////////////
 

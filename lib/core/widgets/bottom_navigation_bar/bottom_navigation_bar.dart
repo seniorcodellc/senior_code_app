@@ -4,6 +4,7 @@ import 'package:senior_code_app/exports.dart';
 import 'package:senior_code_app/featuers/my_account/presentation/screen/my_account_screen.dart';
 import '../../../featuers/home/presentation/screens/home_screen.dart';
 import '../../../featuers/reservation/presentation/screen/reservation_screen.dart';
+import '../../../featuers/reviews/presentation/screen/reviews_screen.dart';
 import 'bottom_navigation_bar_body.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
@@ -46,20 +47,6 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 
 //! This screens will be removed in the next commits of the project...
 
-
-// Reviews Screen
-class ReviewsScreen extends StatelessWidget {
-  const ReviewsScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Reviews Screen',
-      ),
-    );
-  }
-}
 
 // Chat Screen
 class ChatScreen extends StatelessWidget {
