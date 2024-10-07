@@ -8,7 +8,7 @@ void main() async {
 
   //  A delay for the splash screen
   await Future.delayed(
-    const Duration(seconds: 2),
+    const Duration(seconds: 5),
   );
 
   runApp(

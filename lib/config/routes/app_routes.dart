@@ -8,7 +8,7 @@ class Routes {
   static const String aboutUsRoute = "AboutUsScreen";
   static const String bottomNavigationBar = "BottomNavigationBar";
   static const String confirmedRoute = "ConfirmedScreen";
-  static const String homeRoute = "HomeScreen";
+  // static const String homeRoute = "HomeScreen";
   static const String onBoardingRoute = "OnBoardingScreen";
   static const String resetPasswordRoute = "ResetPasswordScreen";
   static const String sectionsRoute = "SectionScreen";
@@ -51,10 +51,10 @@ class RouteGenerator {
           builder: (context) => const ResetPasswordScreen(),
         );
       //! Home Routes
-      case Routes.homeRoute:
-        return MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
-        );
+      // case Routes.homeRoute:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const HomeScreen(),
+      //   );
       case Routes.bottomNavigationBar:
         return MaterialPageRoute(
           builder: (context) => const CustomBottomNavigationBar(),

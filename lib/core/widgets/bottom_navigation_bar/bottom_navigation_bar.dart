@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:senior_code_app/exports.dart';
 import 'package:senior_code_app/featuers/my_account/presentation/screen/my_account_screen.dart';
+import '../../../featuers/chat/presentation/screen/chat_screen.dart';
 import '../../../featuers/home/presentation/screens/home_screen.dart';
 import '../../../featuers/reservation/presentation/screen/reservation_screen.dart';
 import '../../../featuers/reviews/presentation/screen/reviews_screen.dart';
@@ -47,19 +48,5 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 
 //! This screens will be removed in the next commits of the project...
 
-
-// Chat Screen
-class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Chat Screen',
-      ),
-    );
-  }
-}
 
 
