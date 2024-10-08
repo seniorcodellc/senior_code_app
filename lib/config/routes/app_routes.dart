@@ -25,6 +25,9 @@ class Routes {
   static const String editProfileRoute = "EditProfileScreen";
   static const String changePasswordRoute = "ChangePasswordScreen";
   static const String termsAndConditionsRoute = "TermsAndConditionsScreen";
+
+  static const String resetPasswordPhoneNumberRoute =
+      "ResetPasswordPhoneNumberScreen";
 }
 
 class RouteGenerator {
@@ -50,11 +53,11 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (context) => const ResetPasswordScreen(),
         );
+      case Routes.resetPasswordPhoneNumberRoute:
+        return MaterialPageRoute(
+          builder: (context) => const ResetPasswordWithNumberScreen(),
+        );
       //! Home Routes
-      // case Routes.homeRoute:
-      //   return MaterialPageRoute(
-      //     builder: (context) => const HomeScreen(),
-      //   );
       case Routes.bottomNavigationBar:
         return MaterialPageRoute(
           builder: (context) => const CustomBottomNavigationBar(),

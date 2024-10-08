@@ -55,7 +55,8 @@ class _RememberMeAndForgetPasswordRowSectionState
           alignment: Alignment.centerRight,
           child: GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, Routes.resetPasswordRoute);
+              Navigator.pushNamed(
+                  context, Routes.resetPasswordPhoneNumberRoute);
             },
             child: Text(
               "Forgot Password?",

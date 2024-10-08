@@ -1,7 +1,6 @@
 import 'package:senior_code_app/core/extensions.dart';
-
-import '../../../../../core/widgets/senior_code_app_bar.dart';
 import '../../../../../exports.dart';
+import 'reset_password_app_bar.dart';
 
 class ResetPasswordAppBarAndImageBelowItSection extends StatelessWidget {
   const ResetPasswordAppBarAndImageBelowItSection({super.key});
@@ -13,11 +12,7 @@ class ResetPasswordAppBarAndImageBelowItSection extends StatelessWidget {
         const Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SeniorCodeAppBarArrow(
-              height: 24,
-              width: 24,
-              backArrowIconColor: AppColors.black,
-            ),
+            ResetPasswordAppBar(),
           ],
         ),
         32.vs,
