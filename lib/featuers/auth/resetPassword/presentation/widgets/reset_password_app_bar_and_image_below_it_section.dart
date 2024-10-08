@@ -1,6 +1,6 @@
 import 'package:senior_code_app/core/extensions.dart';
 import '../../../../../exports.dart';
-import 'reset_password_app_bar.dart';
+import 'reset_password_app_bar_section.dart';
 
 class ResetPasswordAppBarAndImageBelowItSection extends StatelessWidget {
   const ResetPasswordAppBarAndImageBelowItSection({super.key});
@@ -12,7 +12,7 @@ class ResetPasswordAppBarAndImageBelowItSection extends StatelessWidget {
         const Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            ResetPasswordAppBar(),
+            ResetPasswordAppBarSection(),
           ],
         ),
         32.vs,

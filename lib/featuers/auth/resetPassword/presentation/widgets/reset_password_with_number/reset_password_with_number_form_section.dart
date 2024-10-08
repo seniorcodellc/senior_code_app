@@ -2,20 +2,22 @@ import 'package:flutter/foundation.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:senior_code_app/core/extensions.dart';
 
+import '../../../../../../config/routes/app_routes.dart';
 import '../../../../../../core/utils/app_styels.dart';
-import '../../../../../../core/widgets/app_text_button.dart';
 import '../../../../../../exports.dart';
+import '../reset_password_button_section.dart';
+import '../reset_password_text_section.dart';
 
-class ResetPasswordWithNumberForm extends StatefulWidget {
-  const ResetPasswordWithNumberForm({super.key});
+class ResetPasswordWithNumberFormSection extends StatefulWidget {
+  const ResetPasswordWithNumberFormSection({super.key});
 
   @override
-  State<ResetPasswordWithNumberForm> createState() =>
-      _ResetPasswordWithNumberFormState();
+  State<ResetPasswordWithNumberFormSection> createState() =>
+      _ResetPasswordWithNumberFormSectionState();
 }
 
-class _ResetPasswordWithNumberFormState
-    extends State<ResetPasswordWithNumberForm> {
+class _ResetPasswordWithNumberFormSectionState
+    extends State<ResetPasswordWithNumberFormSection> {
   FocusNode focusNode = FocusNode();
 
   @override
@@ -23,13 +25,7 @@ class _ResetPasswordWithNumberFormState
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "Reset Password",
-          style: AppStyles.getSemiBoldStyle(
-            color: AppColors.black,
-            fontSize: 24,
-          ),
-        ),
+        const ResetPasswordText(),
         23.vs,
         Text(
           "Please enter the phone number associated with your account.",
@@ -83,19 +79,11 @@ class _ResetPasswordWithNumberFormState
           },
         ),
         40.vs,
-        AppTextButton(
-          horizontalPadding: 129,
-          verticalPadding: 17.5,
-          buttonHeight: 54,
-          borderRadius: 10,
-          backgroundColor: AppColors.steelBlue,
-          buttonText: "Next",
-          textStyle: AppStyles.getSemiBoldStyle(
-            color: AppColors.white,
-            fontSize: 16,
-          ),
-          onPressed: () {},
-        )
+        ResetPasswordButtonSection(
+          onPressed: () {
+            Navigator.pushNamed(context, Routes.resetPasswordOtpRoute);
+          },
+        ),
       ],
     );
   }

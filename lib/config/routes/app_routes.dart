@@ -1,5 +1,6 @@
 import '../../exports.dart';
 
+import '../../featuers/auth/resetPassword/presentation/screens/reset_password_otp_screen.dart';
 import 'routes_exports.dart';
 
 class Routes {
@@ -8,7 +9,6 @@ class Routes {
   static const String aboutUsRoute = "AboutUsScreen";
   static const String bottomNavigationBar = "BottomNavigationBar";
   static const String confirmedRoute = "ConfirmedScreen";
-  // static const String homeRoute = "HomeScreen";
   static const String onBoardingRoute = "OnBoardingScreen";
   static const String resetPasswordRoute = "ResetPasswordScreen";
   static const String sectionsRoute = "SectionScreen";
@@ -25,9 +25,9 @@ class Routes {
   static const String editProfileRoute = "EditProfileScreen";
   static const String changePasswordRoute = "ChangePasswordScreen";
   static const String termsAndConditionsRoute = "TermsAndConditionsScreen";
-
   static const String resetPasswordPhoneNumberRoute =
       "ResetPasswordPhoneNumberScreen";
+  static const String resetPasswordOtpRoute = "ResetPasswordOtpScreen";
 }
 
 class RouteGenerator {
@@ -56,6 +56,10 @@ class RouteGenerator {
       case Routes.resetPasswordPhoneNumberRoute:
         return MaterialPageRoute(
           builder: (context) => const ResetPasswordWithNumberScreen(),
+        );
+      case Routes.resetPasswordOtpRoute:
+        return MaterialPageRoute(
+          builder: (context) => const ResetPasswordOtpScreen(),
         );
       //! Home Routes
       case Routes.bottomNavigationBar:

@@ -1,10 +1,11 @@
 import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../../exports.dart';
-import '../widgets/reset_password_with_number/reset_password_with_number_body_section.dart';
 
-class ResetPasswordWithNumberScreen extends StatelessWidget {
-  const ResetPasswordWithNumberScreen({super.key});
+import '../widgets/reset_password_with_otp/reset_password_with_otp_body_section.dart';
+
+class ResetPasswordOtpScreen extends StatelessWidget {
+  const ResetPasswordOtpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class ResetPasswordWithNumberScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 22.w),
-            child: const ResetPasswordWithNumberBodySection(),
+            child: const ResetPasswordWithOtpBodySection(),
           ),
         ),
       ),
