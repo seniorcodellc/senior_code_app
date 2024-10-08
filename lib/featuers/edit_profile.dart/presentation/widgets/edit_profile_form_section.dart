@@ -28,6 +28,7 @@ class _EditProfileFormSectionState extends State<EditProfileFormSection> {
 
   String? selectedGender;
   FocusNode focusNode = FocusNode();
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -75,16 +76,19 @@ class _EditProfileFormSectionState extends State<EditProfileFormSection> {
             color: AppColors.slateGrayColor,
           ),
           languageCode: "en",
+          initialCountryCode: 'EG',
           //! TODO: In release mode, comment out the following KDebug print statements.
           //! TODO: In development or debug mode, uncomment them for testing purposes only.
+
           onChanged: (phone) {
             if (kDebugMode) {
-              print(phone.completeNumber);
+              print('Complete Phone Number: ${phone.completeNumber}');
             }
           },
           onCountryChanged: (country) {
             if (kDebugMode) {
-              print('Country changed to: ${country.name}');
+              print(
+                  'Country changed to: ${country.name}, Code: ${country.dialCode}');
             }
           },
         ),
