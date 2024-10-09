@@ -225,7 +225,7 @@ class _SignupScreenFormSectionState extends State<SignupScreenFormSection> {
               },
               onSubmitted: (phone) {
                 context.read<AuthCubit>().phone = phone;
-                print('OnSubmitted Phone Number: ${phone}');
+                print('OnSubmitted Phone Number: $phone');
               }),
           // AppTextFormField(
           //   prefixIcon: const CustomSVGImage(
