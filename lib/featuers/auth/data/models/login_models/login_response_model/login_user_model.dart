@@ -1,4 +1,4 @@
-class loginUserResponseModel {
+class LoginUserResponseModel {
   int? id;
   String? img;
   String? name;
@@ -12,7 +12,7 @@ class loginUserResponseModel {
   int? verifyPhone;
   String? otpExpiresAt;
 
-  loginUserResponseModel({
+  LoginUserResponseModel({
     this.id,
     this.img,
     this.name,
@@ -27,8 +27,8 @@ class loginUserResponseModel {
     this.otpExpiresAt,
   });
 
-  factory loginUserResponseModel.fromJson(Map<String, dynamic> json) =>
-      loginUserResponseModel(
+  factory LoginUserResponseModel.fromJson(Map<String, dynamic> json) =>
+      LoginUserResponseModel(
         id: json['id'] as int?,
         img: json['img'] as String?,
         name: json['name'] as String?,

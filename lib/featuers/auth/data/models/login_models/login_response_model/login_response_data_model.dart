@@ -1,17 +1,17 @@
-import 'user.dart';
+import 'login_user_model.dart';
 
-class loginDataResponseModel {
+class LoginDataResponseModel {
   String? token;
-  loginUserResponseModel? user;
+  LoginUserResponseModel? user;
 
-  loginDataResponseModel({this.token, this.user});
+  LoginDataResponseModel({this.token, this.user});
 
-  factory loginDataResponseModel.fromJson(Map<String, dynamic> json) =>
-      loginDataResponseModel(
+  factory LoginDataResponseModel.fromJson(Map<String, dynamic> json) =>
+      LoginDataResponseModel(
         token: json['token'] as String?,
         user: json['user'] == null
             ? null
-            : loginUserResponseModel
+            : LoginUserResponseModel
                 .fromJson(json['user'] as Map<String, dynamic>),
       );
 

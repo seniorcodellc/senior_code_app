@@ -2,10 +2,10 @@ import 'package:get_it/get_it.dart';
 import 'package:senior_code_app/exports.dart';
 import 'package:senior_code_app/featuers/auth/data/repositories/auth_repo_imp.dart';
 import 'package:senior_code_app/featuers/auth/domain/repositories/auth_repo.dart';
+import 'package:senior_code_app/featuers/auth/domain/use_cases/auth_use_cases.dart';
 import 'core/network/impl/dio_impl/dio-consumer.dart';
 import 'core/network/impl/dio_impl/dio_interceptors.dart';
 import 'featuers/auth/data/data_sources/remote_data_source.dart';
-import 'featuers/auth/domain/use_cases/auth_use_cases.dart';
 import 'featuers/auth/managers/auth_cubit/auth_cubit.dart';
 
 class ServiceLocator {
@@ -43,19 +43,29 @@ class ServiceLocator {
   }
 
   void _registerUser() {
+    //! Register Data Sources
     getIt.registerLazySingleton<RemoteAuthDataSource>(
       () => RemoteAuthDataSourceImpl(dioConsumer: getIt()),
     );
+
+    //! Register Repository
     getIt.registerLazySingleton<AuthRepository>(
       () => AuthRepositoryImpl(
         remoteAuthDataSource: getIt(),
       ),
     );
+
+    //! Register Use Cases
     getIt.registerLazySingleton<AuthUseCase>(
       () => AuthUseCase(getIt()),
     );
+
+    //! Register Cubit
     getIt.registerLazySingleton<AuthCubit>(
-      () => AuthCubit(getIt()),
+      () => AuthCubit(
+        getIt<AuthUseCase>(),
+       
+      ),
     );
   }
 }

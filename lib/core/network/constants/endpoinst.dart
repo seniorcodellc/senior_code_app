@@ -6,11 +6,12 @@ abstract class EndPoints {
   static const String editProfile = '${api}profile/updateProfile';
 
 ///////////////////////////// authentication ////////////////////////////
-  static const String register = '${api}signup';
+  static const String signup = '${api}register';
   static const String login = '${api}login';
   static const String verify = '${api}verify';
   static const String verifyForgetPassword = '${api}verifyForgetPassword';
   static const String forgetPassword = '${api}forgetPassword';
   static const String resetPassword = '${api}resetPassword';
   static const String userLogout = '${api}logout';
+  static const String verifyOtp = '${api}verifyOtp';
 }

@@ -1,6 +1,6 @@
 import 'package:senior_code_app/exports.dart';
 
-import 'data.dart';
+import 'login_response_data_model.dart';
 
 class loginResponseModel extends ResponseModel {
   loginResponseModel({super.status, super.message, super.data});
@@ -11,8 +11,8 @@ class loginResponseModel extends ResponseModel {
       message: json['message'] as String?,
       data: json['data'] == null
           ? null
-          : loginDataResponseModel
-              .fromJson(json['data'] as Map<String, dynamic>),
+          : LoginDataResponseModel.fromJson(
+              json['data'] as Map<String, dynamic>),
     );
   }
 

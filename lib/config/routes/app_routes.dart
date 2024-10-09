@@ -164,7 +164,10 @@ class RouteGenerator {
         );
       case Routes.signupRoute:
         return buildPageRoute(
-          child: const SignupScreen(),
+          child: BlocProvider(
+            create: (context) => ServiceLocator().getIt<AuthCubit>(),
+            child: const SignupScreen(),
+          ),
         );
       case Routes.verificationRoute:
         return buildPageRoute(

@@ -4,7 +4,7 @@ import '../../../../../core/utils/app_styels.dart';
 import '../../../../../core/widgets/app_text_button.dart';
 import '../../../../../core/widgets/text_form_field.dart';
 import '../../../../../exports.dart';
-import '../../../data/models/login_request_model/login_request_model.dart';
+import '../../../data/models/login_models/login_request_model/login_request_model.dart';
 import 'remember_me_and_forget_password_row_section.dart';
 
 class SigninTextFormFieldSection extends StatefulWidget {
@@ -55,7 +55,7 @@ class _SigninScreenBodySectionState extends State<SigninTextFormFieldSection> {
   //       );
   //     },
   //   );
-  //   // to listen to the changes of the user text and match it with the regex.
+    // to listen to the changes of the user text and match it with the regex.
   // }
 
   @override

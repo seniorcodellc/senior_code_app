@@ -1,5 +1,6 @@
 import 'package:senior_code_app/core/extensions.dart';
 import '../../../../../exports.dart';
+import '../widgets/signup_bloc_listner.dart';
 import '../widgets/signup_screen_body_section.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -17,8 +18,13 @@ class _SignupScreenState extends State<SignupScreen> {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 35.39.w),
-            child: const Center(
-              child: SignupScreenBodySection(),
+            child: const Column(
+              children: [
+                Center(
+                  child: SignupScreenBodySection(),
+                ),
+                AuthSignupBlocListner(),
+              ],
             ),
           ),
         ),
