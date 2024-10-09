@@ -1,3 +1,4 @@
+import 'package:senior_code_app/config/routes/app_routes_helper.dart';
 import 'package:senior_code_app/exports.dart';
 
 import 'config/routes/app_routes.dart';
@@ -18,6 +19,7 @@ class SeniorCodeApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.primaryColor,
       ),
       onGenerateRoute: RouteGenerator.getRoute,
+      navigatorKey: navigatorKey,
       home: const OnboardingScreen(),
     );
   }

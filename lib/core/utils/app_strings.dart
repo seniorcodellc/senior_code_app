@@ -126,11 +126,11 @@ class AppStrings {
   final String heavyVehicle = "Heavy Vehicle";
   final String transport = "Transport";
   final String profile = "Profile";
-  final String login2 = "Login";
+  final String login2 = "login";
   final String home = "Home";
   final String history = "History";
   final String mobileNumber = "mobileNumber";
-  final String bySigningWord = "By signing up you agree Menkaf";
+  final String bylogingWord = "By loging up you agree Menkaf";
   final String password = "password";
   final String setPassword = "Enter your password";
   final String setNewPassword = "Enter your New password";
@@ -381,7 +381,7 @@ class AppStrings {
 
   final String logIln = 'Log in';
 
-  final String login = 'Login';
+  final String login = 'login';
 
   final String loginSubTitle = 'Log Back Into Your Account';
 

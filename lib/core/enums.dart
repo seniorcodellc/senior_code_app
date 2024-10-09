@@ -22,4 +22,5 @@ enum AlertTypes {
 enum DialogTimingTypes { long, short }
 
 enum AnimationType { fade, scale, rotate, slide, slideBottomTop }
-enum SubServiceTypes { Default , washing }
+
+enum SubServiceTypes { Default, washing }

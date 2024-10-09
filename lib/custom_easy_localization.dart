@@ -9,7 +9,8 @@ class CustomEasyLocalization extends StatelessWidget {
   Widget build(BuildContext context) {
     return EasyLocalization(
       supportedLocales: AppLocalizationsConstants().supportedLocales,
-      path: AppLocalizationsConstants().path, // <-- change the path of the translation files
+      path: AppLocalizationsConstants()
+          .path, // <-- change the path of the translation files
       fallbackLocale: AppLocalizationsConstants().enLocale,
       saveLocale: true,
       startLocale: AppLocalizationsConstants().arLocale,

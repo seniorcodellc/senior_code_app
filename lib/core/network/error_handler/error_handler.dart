@@ -36,7 +36,8 @@ class ErrorHandler implements Exception {
         switch (error.response?.statusCode) {
           case ResponseCode.BAD_REQUEST:
             if (jsonDecode(error.response!.data)["message"] != null) {
-              return Failure(ResponseCode.BAD_REQUEST, jsonDecode(error.response!.data)["message"]);
+              return Failure(ResponseCode.BAD_REQUEST,
+                  jsonDecode(error.response!.data)["message"]);
             } else {
               return DataSource.BAD_REQUEST.getFailure();
             }
@@ -71,34 +72,47 @@ extension DataSourceExtension on DataSource {
   Failure getFailure() {
     switch (this) {
       case DataSource.BAD_REQUEST:
-        return Failure(ResponseCode.BAD_REQUEST, ResponseMessage().BAD_REQUEST.trans);
+        return Failure(
+            ResponseCode.BAD_REQUEST, ResponseMessage().BAD_REQUEST.trans);
       case DataSource.FORBIDDEN:
-        return Failure(ResponseCode.FORBIDDEN, ResponseMessage().FORBIDDEN.trans);
+        return Failure(
+            ResponseCode.FORBIDDEN, ResponseMessage().FORBIDDEN.trans);
       case DataSource.UNAUTHORISED:
-        return Failure(ResponseCode.UNAUTHORISED, ResponseMessage().UNAUTHORISED.trans);
+        return Failure(
+            ResponseCode.UNAUTHORISED, ResponseMessage().UNAUTHORISED.trans);
       case DataSource.NOT_FOUND:
-        return Failure(ResponseCode.NOT_FOUND, ResponseMessage().NOT_FOUND.trans);
+        return Failure(
+            ResponseCode.NOT_FOUND, ResponseMessage().NOT_FOUND.trans);
       case DataSource.SERVER_ERROR:
-        return Failure(ResponseCode.SERVER_ERROR, ResponseMessage().SERVER_ERROR.trans);
+        return Failure(
+            ResponseCode.SERVER_ERROR, ResponseMessage().SERVER_ERROR.trans);
 
       case DataSource.CONNECT_TIMEOUT:
-        return Failure(ResponseCode.CONNECT_TIMEOUT, ResponseMessage().CONNECT_TIMEOUT.trans);
+        return Failure(ResponseCode.CONNECT_TIMEOUT,
+            ResponseMessage().CONNECT_TIMEOUT.trans);
       case DataSource.CANCEL:
         return Failure(ResponseCode.CANCEL, ResponseMessage().CANCEL.trans);
       case DataSource.RECEIVE_TIMEOUT:
-        return Failure(ResponseCode.RECEIVE_TIMEOUT, ResponseMessage().RECEIVE_TIMEOUT.trans);
+        return Failure(ResponseCode.RECEIVE_TIMEOUT,
+            ResponseMessage().RECEIVE_TIMEOUT.trans);
       case DataSource.SEND_TIMEOUT:
-        return Failure(ResponseCode.SEND_TIMEOUT, ResponseMessage().SEND_TIMEOUT.trans);
+        return Failure(
+            ResponseCode.SEND_TIMEOUT, ResponseMessage().SEND_TIMEOUT.trans);
       case DataSource.CACHE_WRITE_ERROR:
-        return Failure(ResponseCode.CACHE_READ_ERROR, ResponseMessage().CACHE_WRITE_ERROR.trans);
+        return Failure(ResponseCode.CACHE_READ_ERROR,
+            ResponseMessage().CACHE_WRITE_ERROR.trans);
       case DataSource.CACHE_READ_ERROR:
-        return Failure(ResponseCode.CACHE_READ_ERROR, ResponseMessage().CACHE_READ_ERROR.trans);
+        return Failure(ResponseCode.CACHE_READ_ERROR,
+            ResponseMessage().CACHE_READ_ERROR.trans);
       case DataSource.NO_INTERNET_CONNECTION:
-        return Failure(ResponseCode.NO_INTERNET_CONNECTION, ResponseMessage().NO_INTERNET_CONNECTION.trans);
+        return Failure(ResponseCode.NO_INTERNET_CONNECTION,
+            ResponseMessage().NO_INTERNET_CONNECTION.trans);
       case DataSource.BAD_CERTIFICATE_ERROR:
-        return Failure(ResponseCode.BAD_CERTIFICATION_ERROR, ResponseMessage().CERTIFICATION_ERROR.trans);
+        return Failure(ResponseCode.BAD_CERTIFICATION_ERROR,
+            ResponseMessage().CERTIFICATION_ERROR.trans);
       case DataSource.CONNECTION_ERROR:
-        return Failure(ResponseCode.CONNECTION_ERROR, ResponseMessage().CONNECTION_ERROR.trans);
+        return Failure(ResponseCode.CONNECTION_ERROR,
+            ResponseMessage().CONNECTION_ERROR.trans);
       case DataSource.DEFAULT:
         return Failure(ResponseCode.DEFAULT, ResponseMessage().DEFAULT.trans);
       default:

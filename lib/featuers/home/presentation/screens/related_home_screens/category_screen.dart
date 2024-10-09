@@ -12,7 +12,7 @@ class CategoryScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 19.w),
-            child:const CategoryScreenBodySection(),
+            child: const CategoryScreenBodySection(),
           ),
         ),
       ),

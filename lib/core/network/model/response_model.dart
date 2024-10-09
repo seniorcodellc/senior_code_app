@@ -4,7 +4,8 @@
 
 import 'dart:convert';
 
-ResponseModel responseModelFromJson(String str) => ResponseModel.fromJson(json.decode(str));
+ResponseModel responseModelFromJson(String str) =>
+    ResponseModel.fromJson(json.decode(str));
 
 class BaseResponse {
   String? code;
@@ -41,7 +42,8 @@ class ResponseListModel extends BaseResponse {
     this.data,
   });
 
-  factory ResponseListModel.fromJson(Map<String, dynamic> json) => ResponseListModel(
+  factory ResponseListModel.fromJson(Map<String, dynamic> json) =>
+      ResponseListModel(
         status: json["status"],
         code: json["code"],
         message: json["message"],

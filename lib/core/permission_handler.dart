@@ -24,7 +24,10 @@ class PermissionManager {
     permissionRequest = PermissionRequest();
     permissionContext = PermissionContext();
   }
-  setPermissionTypeAndContext({required BuildContext context, required int type, required Widget dialog}) {
+  setPermissionTypeAndContext(
+      {required BuildContext context,
+      required int type,
+      required Widget dialog}) {
     permissionContext.setContext(context: context, dialog: dialog);
     permissionRequest.setPermissionType(type);
   }
@@ -74,7 +77,8 @@ class PermissionRequest extends WidgetsBindingObserver {
   Future<bool> permanentDeniedHandle() async {
     bool isOpened = await openAppSettings();
     if (isOpened.isTrue) {
-      WidgetsBinding.instance.addObserver(this); //this sets WidgetsBindingObserver
+      WidgetsBinding.instance
+          .addObserver(this); //this sets WidgetsBindingObserver
       for (int counter = 30; counter >= 0; counter--) {
         await Future.delayed(1.milliseconds, () {});
         if (counter == 0 && isClosed.isFalse) {
@@ -99,7 +103,9 @@ class PermissionRequest extends WidgetsBindingObserver {
     super.didChangeAppLifecycleState(state);
   }
 
-  Future<bool> isPermissionGranted(PermissionStatus status) async => status.isGranted;
+  Future<bool> isPermissionGranted(PermissionStatus status) async =>
+      status.isGranted;
   Future<PermissionStatus> checkStatus() => Permission.byValue(type).status;
-  Future<PermissionStatus> requestPermission() => Permission.byValue(type).request();
+  Future<PermissionStatus> requestPermission() =>
+      Permission.byValue(type).request();
 }

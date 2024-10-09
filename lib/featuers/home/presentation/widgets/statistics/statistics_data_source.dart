@@ -1,5 +1,5 @@
 // List of statistics data
-//! Some data will be updated later when integrating with the API 
+//! Some data will be updated later when integrating with the API
 import 'package:senior_code_app/core/utils/app_assets.dart';
 
 final statisticsData = [

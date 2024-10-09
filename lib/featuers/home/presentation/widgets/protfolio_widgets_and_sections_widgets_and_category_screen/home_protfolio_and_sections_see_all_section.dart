@@ -6,7 +6,8 @@ import '../../../../../exports.dart';
 class HomeSeeAll extends StatelessWidget {
   final void Function() seeAllOnTap;
   final String textData;
-  const HomeSeeAll({super.key, required this.textData,required this.seeAllOnTap});
+  const HomeSeeAll(
+      {super.key, required this.textData, required this.seeAllOnTap});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class HomeSeeAll extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap:seeAllOnTap ,
+            onTap: seeAllOnTap,
             child: Text(
               "See All",
               overflow: TextOverflow.ellipsis,

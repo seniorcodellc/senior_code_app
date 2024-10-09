@@ -6,7 +6,8 @@ export 'dart:io';
 export 'package:auto_size_text/auto_size_text.dart';
 export 'package:dartz/dartz.dart' hide State;
 export 'package:dio/dio.dart';
-export 'package:easy_localization/easy_localization.dart' hide TextDirection, MapExtension;
+export 'package:easy_localization/easy_localization.dart'
+    hide TextDirection, MapExtension;
 export 'package:flutter/material.dart';
 export 'package:flutter/services.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,5 +33,3 @@ export 'core/utils/app_fonts.dart';
 export 'core/utils/app_strings.dart';
 export 'core/utils/app_style.dart';
 export 'core/widgets/cached_network_image.dart';
-
-

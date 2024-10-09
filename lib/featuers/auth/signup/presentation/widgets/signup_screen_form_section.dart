@@ -54,7 +54,7 @@ class _SignupScreenFormSectionState extends State<SignupScreenFormSection> {
                 Navigator.pop(context);
               },
               child: Text(
-                "Login",
+                "login",
                 style: AppStyles.getSemiBoldStyle(
                   fontSize: 12,
                   color: AppColors.secondPrimaryColor,
@@ -118,7 +118,7 @@ class _SignupScreenFormSectionState extends State<SignupScreenFormSection> {
         ),
         2.vs,
         DatePickerTextField(
-            pickedDateColor: AppColors.black, // The picked date color here
+          pickedDateColor: AppColors.black, // The picked date color here
 
           fillColor: AppColors.white,
           hintStyle: AppStyles.getMediumStyle(

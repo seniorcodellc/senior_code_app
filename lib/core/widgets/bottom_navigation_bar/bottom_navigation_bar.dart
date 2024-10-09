@@ -47,6 +47,3 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 }
 
 //! This screens will be removed in the next commits of the project...
-
-
-

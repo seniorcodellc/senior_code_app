@@ -21,7 +21,10 @@ class CategoryListViewSection extends StatelessWidget {
         (index) {
           return PortfolioAndSectionsAndCategoryListViewItemCard(
             cardOnTap: () {
-              Navigator.pushNamed(context, Routes.categoryDetailsRoute,);
+              Navigator.pushNamed(
+                context,
+                Routes.categoryDetailsRoute,
+              );
             },
             cardLeftPadding: 0,
             projectImageHeight: 119,

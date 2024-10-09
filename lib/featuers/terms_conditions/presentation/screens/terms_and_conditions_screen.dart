@@ -6,7 +6,6 @@ import '../widgets/trems_and_conditions_screen_body_section.dart';
 class TermsAndConditionsScreen extends StatelessWidget {
   const TermsAndConditionsScreen({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,4 +20,3 @@ class TermsAndConditionsScreen extends StatelessWidget {
     );
   }
 }
-

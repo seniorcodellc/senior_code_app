@@ -10,7 +10,7 @@ class DownArrow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Icon(
-      color:downArrowColor?? AppColors.white,
+      color: downArrowColor ?? AppColors.white,
       Icons.keyboard_arrow_down_rounded,
       size: downArrowSize?.r ?? 26.r,
     );

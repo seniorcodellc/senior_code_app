@@ -1,4 +1,3 @@
-
 import 'package:senior_code_app/core/extensions.dart';
 
 import '../../exports.dart';
@@ -7,7 +6,7 @@ class CustomBottomSheet {
   static showCustomBottomSheet(
       {context,
       required Widget content,
-       EdgeInsetsDirectional? padding,
+      EdgeInsetsDirectional? padding,
       bool isBackground = false,
       BoxConstraints? constraint}) {
     showModalBottomSheet(

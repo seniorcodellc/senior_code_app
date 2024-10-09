@@ -49,7 +49,8 @@ class DioConsumer extends ApiConsumer {
     Map<String, dynamic>? queryParams,
   }) async {
     client.options.baseUrl = baseUrl;
-    final Response<dynamic> response = await client.get(path, queryParameters: queryParams);
+    final Response<dynamic> response =
+        await client.get(path, queryParameters: queryParams);
     debugPrint(response.realUri.toString());
     //   debugPrint(response.data.json);
     debugPrint(" status code is ${response.statusCode}");

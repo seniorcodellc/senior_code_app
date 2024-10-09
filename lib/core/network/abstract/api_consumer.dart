@@ -19,5 +19,8 @@ abstract class ApiConsumer {
     Map<String, dynamic>? queryParams,
   });
   Future deleteRequest(
-      {String baseUrl = EndPoints.baseUrl, required String path, Map<String, dynamic>? body, Map<String, dynamic>? queryParams});
+      {String baseUrl = EndPoints.baseUrl,
+      required String path,
+      Map<String, dynamic>? body,
+      Map<String, dynamic>? queryParams});
 }

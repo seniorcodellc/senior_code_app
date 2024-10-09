@@ -25,7 +25,7 @@ class AppTextFormField extends StatelessWidget {
   // Background color of the text field.
   final TextEditingController? controller;
   // final Function(String?) validator;
-  // final Function(String?) validator;
+  final Function(String?)? validator;
   final Color? enabledBorderSideColor;
   final Color? focusdBorderColor;
   final int? radius;
@@ -48,7 +48,8 @@ class AppTextFormField extends StatelessWidget {
     this.enabledBorderSideColor,
     this.labelText,
     this.labelStyle,
-    this.focusdBorderColor, this.cursorColor,
+    this.focusdBorderColor,
+    this.cursorColor,  this.validator,
   });
 
   @override
@@ -57,11 +58,11 @@ class AppTextFormField extends StatelessWidget {
       controller: controller,
       // controller manages the text being edited.
 
-      // validator: (value) {
-      // return validator(value);
+      validator: (value) {
+      return validator!(value);
       // validator is a function that checks if the text input is valid and
       // returns an error message if it isn't.
-      // },
+      },
 
       decoration: InputDecoration(
         labelText: labelText,

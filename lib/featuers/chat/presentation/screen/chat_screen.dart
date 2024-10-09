@@ -197,7 +197,8 @@ class _ChatScreenState extends State<ChatScreen> {
                   children: [
                     const Icon(Icons.insert_drive_file, color: AppColors.black),
                     4.vs,
-                    const Text("File", style: TextStyle(color: AppColors.black)),
+                    const Text("File",
+                        style: TextStyle(color: AppColors.black)),
                   ],
                 ),
               ),
@@ -211,7 +212,8 @@ class _ChatScreenState extends State<ChatScreen> {
                   children: [
                     const Icon(Icons.image, color: AppColors.black),
                     4.vs,
-                    const Text("Media", style: TextStyle(color: AppColors.black)),
+                    const Text("Media",
+                        style: TextStyle(color: AppColors.black)),
                   ],
                 ),
               ),

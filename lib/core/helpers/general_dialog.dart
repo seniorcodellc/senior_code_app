@@ -1,6 +1,5 @@
 import 'package:senior_code_app/core/extensions.dart';
 
-
 import '../../exports.dart';
 import '../utils/app_styels.dart';
 
@@ -25,7 +24,9 @@ Future showCustomDialog({
             child: Container(
               height: 184,
               margin: const EdgeInsets.all(15),
-              decoration: const BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.all(Radius.circular(10))),
+              decoration: const BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
               alignment: Alignment.center,
               child: Column(
                 children: [

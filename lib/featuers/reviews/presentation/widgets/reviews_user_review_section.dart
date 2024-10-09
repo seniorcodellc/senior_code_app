@@ -20,9 +20,9 @@ class ReviewsUserReviewSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-           const ReviewsUserName(),
+              const ReviewsUserName(),
               10.vs,
-           const ReviewsInteractiveBarIndicator(),
+              const ReviewsInteractiveBarIndicator(),
               10.vs,
               const ReviewsUserReview(),
             ],

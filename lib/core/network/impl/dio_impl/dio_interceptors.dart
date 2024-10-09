@@ -15,8 +15,10 @@ class DioInterceptor extends Interceptor {
     }
     options.headers[HttpHeaders.acceptLanguageHeader] = AppPrefs.language;
 
-    if (options.baseUrl.contains("google").isFalse && AppPrefs.token.isNotNull) {
-      options.headers[HttpHeaders.authorizationHeader] = "Bearer ${AppPrefs.token}";
+    if (options.baseUrl.contains("google").isFalse &&
+        AppPrefs.token.isNotNull) {
+      options.headers[HttpHeaders.authorizationHeader] =
+          "Bearer ${AppPrefs.token}";
     }
     super.onRequest(options, handler);
   }
@@ -24,7 +26,8 @@ class DioInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     if (kDebugMode) {
-      print('RESPONSE[${response.statusCode}] => PATH: ${response.requestOptions.path}');
+      print(
+          'RESPONSE[${response.statusCode}] => PATH: ${response.requestOptions.path}');
     }
     super.onResponse(response, handler);
   }
@@ -32,7 +35,8 @@ class DioInterceptor extends Interceptor {
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
     if (kDebugMode) {
-      print('ERROR[${err.response?.statusCode}] => PATH: ${err.requestOptions.path}');
+      print(
+          'ERROR[${err.response?.statusCode}] => PATH: ${err.requestOptions.path}');
     }
     super.onError(err, handler);
   }

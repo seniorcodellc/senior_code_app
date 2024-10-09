@@ -1,7 +1,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:senior_code_app/core/extensions.dart';
 
-
 // import '../../core/size_utils.dart';
 // import '../../core/utils/app_colors.dart';
 // import '../../core/utils/app_fonts.dart';

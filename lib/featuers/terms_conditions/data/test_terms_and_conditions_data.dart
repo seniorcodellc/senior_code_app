@@ -1,6 +1,6 @@
 //! TODO: Data will be updated when integrated with the backend
 final List<Map<String, String>> terms = [
-    // List of terms and conditions as a list of maps
+  // List of terms and conditions as a list of maps
   {
     'title': 'Types of Data We Collect:',
     'description':

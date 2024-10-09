@@ -21,7 +21,8 @@ class CustomElevatedButton extends StatelessWidget {
       this.width,
       this.textColor = AppColors.white,
       this.style,
-      this.margin, this.buttonStyle});
+      this.margin,
+      this.buttonStyle});
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margin;
   final void Function()? onPressed;
@@ -44,13 +45,14 @@ class CustomElevatedButton extends StatelessWidget {
   }
 
   get _buildButton => ElevatedButton(
-        style: buttonStyle??ElevatedButton.styleFrom(
-          backgroundColor: color ?? AppColors.primaryColor,
-          elevation: elevation,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(radius!), side: side),
-          padding: padding ?? getPadding(vertical: 13.h),
-        ),
+        style: buttonStyle ??
+            ElevatedButton.styleFrom(
+              backgroundColor: color ?? AppColors.primaryColor,
+              elevation: elevation,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(radius!), side: side),
+              padding: padding ?? getPadding(vertical: 13.h),
+            ),
         onPressed: onPressed,
         child: _buildButtonContent,
       );

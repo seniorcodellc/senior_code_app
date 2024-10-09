@@ -1,7 +1,5 @@
 import 'dart:math';
 
-
-
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:senior_code_app/core/enums.dart';
@@ -55,7 +53,7 @@ Future<String?> showPickDialog(BuildContext context, String? image) async {
     //textDirection: AppService().getBlocData<LanguageCubit>().isEn ? TextDirection.ltr : TextDirection.rtl,
     contentPadding: const EdgeInsets.symmetric(vertical: 16),
     title: AppStrings().chooseAction.trans,
-    titleTextStyle:AppStyles.getBoldStyle(fontSize: 16, color: Colors.amber),
+    titleTextStyle: AppStyles.getBoldStyle(fontSize: 16, color: Colors.amber),
     // builder: (_) => FilePickerDialog(isSelected: (image.isNotNull)),
   );
   if (galleryFileTypes.isNotNull) {

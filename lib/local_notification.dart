@@ -5,8 +5,10 @@ import 'package:senior_code_app/core/extensions.dart';
 
 import 'exports.dart';
 
-final BehaviorSubject<ReceivedNotification> didReceiveLocalNotificationSubject = BehaviorSubject<ReceivedNotification>();
-final BehaviorSubject<String> selectNotificationSubject = BehaviorSubject<String>();
+final BehaviorSubject<ReceivedNotification> didReceiveLocalNotificationSubject =
+    BehaviorSubject<ReceivedNotification>();
+final BehaviorSubject<String> selectNotificationSubject =
+    BehaviorSubject<String>();
 
 class ReceivedNotification {
   ReceivedNotification({
@@ -24,12 +26,14 @@ class ReceivedNotification {
 
 class NotificationsService {
   NotificationsService._internal();
-  static final NotificationsService _instance = NotificationsService._internal();
+  static final NotificationsService _instance =
+      NotificationsService._internal();
   factory NotificationsService() => _instance;
   //  LocalNotifications._internal();
   //static LocalNotification instance=;
   //factory getInstance=>LocalNotification();
-  static final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+  static final FlutterLocalNotificationsPlugin
+      _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
   Future<bool> initialize() async {
     bool isPermissionGrated = await _requestPermissions();
@@ -37,7 +41,8 @@ class NotificationsService {
     if (isPermissionGrated.isTrue) {
       InitializationSettings initSettings;
       if (Platform.isAndroid) {
-        AndroidInitializationSettings androidSettings = const AndroidInitializationSettings('app_icon');
+        AndroidInitializationSettings androidSettings =
+            const AndroidInitializationSettings('app_icon');
         initSettings = InitializationSettings(
           android: androidSettings,
         );
@@ -48,7 +53,8 @@ class NotificationsService {
           requestBadgePermission: true,
           requestAlertPermission: true,
           onDidReceiveLocalNotification: (id, title, body, payload) {
-            didReceiveLocalNotificationSubject.add(ReceivedNotification(id: id, title: title!, body: body!, payload: payload!));
+            didReceiveLocalNotificationSubject.add(ReceivedNotification(
+                id: id, title: title!, body: body!, payload: payload!));
           },
         );
         initSettings = InitializationSettings(iOS: iOSSettings);
@@ -58,7 +64,9 @@ class NotificationsService {
         onDidReceiveNotificationResponse: onDidReceiveNotificationResponse,
         onDidReceiveBackgroundNotificationResponse: notificationTapBackground,
       );
-      isInitialized = (await _flutterLocalNotificationsPlugin.initialize(initSettings)).orFalse;
+      isInitialized =
+          (await _flutterLocalNotificationsPlugin.initialize(initSettings))
+              .orFalse;
     } else {
       if (kDebugMode) {
         print("permission is not granted for notification");
@@ -68,16 +76,23 @@ class NotificationsService {
   }
 
   Future<void> showBigPictureNotification(
-      {required String title, required String description, String? contentTitle, String? summaryText, String? payload}) async {
+      {required String title,
+      required String description,
+      String? contentTitle,
+      String? summaryText,
+      String? payload}) async {
     var bigPictureStyleInformation = BigPictureStyleInformation(
       const DrawableResourceAndroidBitmap("cover_image"),
       largeIcon: const DrawableResourceAndroidBitmap("app_icon"),
       contentTitle: contentTitle,
       summaryText: summaryText,
     );
-    NotificationDetails platformDetails =
-        NotificationDetails(android: _getAndroidDetails(styleInformation: bigPictureStyleInformation), iOS: null);
-    await _flutterLocalNotificationsPlugin.show(0, title, description, platformDetails, payload: payload);
+    NotificationDetails platformDetails = NotificationDetails(
+        android:
+            _getAndroidDetails(styleInformation: bigPictureStyleInformation),
+        iOS: null);
+    await _flutterLocalNotificationsPlugin
+        .show(0, title, description, platformDetails, payload: payload);
   }
 
   Future<void> showBigTextNotification(
@@ -87,25 +102,35 @@ class NotificationsService {
       String? contentTitle,
       String? summaryText,
       String? payload}) async {
-    BigTextStyleInformation bigTextStyleInformation = BigTextStyleInformation(bigText,
+    BigTextStyleInformation bigTextStyleInformation = BigTextStyleInformation(
+        bigText,
         htmlFormatBigText: true,
         contentTitle: contentTitle,
         htmlFormatContentTitle: true,
         summaryText: summaryText,
         htmlFormatSummaryText: true);
-    NotificationDetails notificationDetails =
-        NotificationDetails(android: _getAndroidDetails(styleInformation: bigTextStyleInformation), iOS: null);
-    await _flutterLocalNotificationsPlugin.show(0, title, description, notificationDetails, payload: payload);
+    NotificationDetails notificationDetails = NotificationDetails(
+        android: _getAndroidDetails(styleInformation: bigTextStyleInformation),
+        iOS: null);
+    await _flutterLocalNotificationsPlugin
+        .show(0, title, description, notificationDetails, payload: payload);
   }
 
   Future<void> showScheduleNotification(
-      {required title, required description, String? payload, required RepeatInterval scheduledNotificationDateTime}) async {
-    var platformDetails = NotificationDetails(android: _getAndroidDetails(), iOS: _getIOSDetails());
-    await _flutterLocalNotificationsPlugin.periodicallyShow(0, title, description, scheduledNotificationDateTime, platformDetails,
+      {required title,
+      required description,
+      String? payload,
+      required RepeatInterval scheduledNotificationDateTime}) async {
+    var platformDetails = NotificationDetails(
+        android: _getAndroidDetails(), iOS: _getIOSDetails());
+    await _flutterLocalNotificationsPlugin.periodicallyShow(
+        0, title, description, scheduledNotificationDateTime, platformDetails,
         payload: payload);
   }
 
-  AndroidNotificationDetails _getAndroidDetails({StyleInformation? styleInformation}) => AndroidNotificationDetails(
+  AndroidNotificationDetails _getAndroidDetails(
+          {StyleInformation? styleInformation}) =>
+      AndroidNotificationDetails(
         'id',
         'channel ',
         channelDescription: 'description',
@@ -116,35 +141,39 @@ class NotificationsService {
         enableVibration: true,
         styleInformation: styleInformation,
       );
-  DarwinNotificationDetails _getIOSDetails() => const DarwinNotificationDetails();
+  DarwinNotificationDetails _getIOSDetails() =>
+      const DarwinNotificationDetails();
 
   Future<void> showOngoingNotification() async {
-    const AndroidNotificationDetails androidNotificationDetails = AndroidNotificationDetails('channel_id', 'Channel Name',
-        channelDescription: 'Channel Description',
-        importance: Importance.max,
-        priority: Priority.high,
-        icon: 'app_icon',
-        ongoing: true,
-        autoCancel: false);
+    const AndroidNotificationDetails androidNotificationDetails =
+        AndroidNotificationDetails('channel_id', 'Channel Name',
+            channelDescription: 'Channel Description',
+            importance: Importance.max,
+            priority: Priority.high,
+            icon: 'app_icon',
+            ongoing: true,
+            autoCancel: false);
 
     const NotificationDetails notificationDetails = NotificationDetails(
       android: androidNotificationDetails,
     );
-    await _flutterLocalNotificationsPlugin.show(
-        0, 'Flutter Local Notification', 'Flutter Ongoing Notification', notificationDetails,
+    await _flutterLocalNotificationsPlugin.show(0, 'Flutter Local Notification',
+        'Flutter Ongoing Notification', notificationDetails,
         payload: 'Destination Screen(Ongoing Notification)');
   }
 
   Future<bool> _requestPermissions() async {
     if (Platform.isAndroid) {
       bool? isPermissionAndroidGranted = (await _flutterLocalNotificationsPlugin
-              .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
+              .resolvePlatformSpecificImplementation<
+                  AndroidFlutterLocalNotificationsPlugin>()
               ?.requestNotificationsPermission())
           .orFalse;
       return isPermissionAndroidGranted.orFalse;
     } else {
       bool? isPermissionIosGranted = (await _flutterLocalNotificationsPlugin
-              .resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>()
+              .resolvePlatformSpecificImplementation<
+                  IOSFlutterLocalNotificationsPlugin>()
               ?.requestPermissions(
                 alert: true,
                 badge: true,
@@ -166,7 +195,8 @@ class NotificationsService {
     }));*/
   }
 
-  static onDidReceiveNotificationResponse(NotificationResponse notificationResponse) {
+  static onDidReceiveNotificationResponse(
+      NotificationResponse notificationResponse) {
     // handle action
     debugPrint("pressed"); // ...
     debugPrint("presseddddddddd");
@@ -177,7 +207,8 @@ class NotificationsService {
     }));*/
   }
 
-  showSimpleNotification({required title, required description, String? payload}) async {
+  showSimpleNotification(
+      {required title, required description, String? payload}) async {
     NotificationDetails platformDetails = NotificationDetails(
       android: _getAndroidDetails(),
       iOS: _getIOSDetails(),

@@ -1,5 +1,3 @@
-
-
 import 'package:senior_code_app/core/extensions.dart';
 
 import '../../../../core/utils/app_styels.dart';

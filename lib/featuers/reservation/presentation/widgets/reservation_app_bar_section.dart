@@ -6,9 +6,9 @@ class ReservationAppBarSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const HomeAndRelatedScreensCustomAppBar(
-          homeCustomAppBarHorizontalPadding: 20,
-          homeCustomAppBarTextData: 'Reservation',
-        );
+    return const HomeAndRelatedScreensCustomAppBar(
+      homeCustomAppBarHorizontalPadding: 20,
+      homeCustomAppBarTextData: 'Reservation',
+    );
   }
 }

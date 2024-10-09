@@ -7,7 +7,8 @@ class AppPrefs {
   static String? deviceToken;
   static String? profileImage;
 
-  static final SharedPreferences _preferences = ServiceLocator().getIt<SharedPreferences>();
+  static final SharedPreferences _preferences =
+      ServiceLocator().getIt<SharedPreferences>();
   static const String prefsUsersKey = 'CACHED_USERS';
   static const String isLanguageSelectedKey = 'Language_SELECTED';
   static const String prefsLocationKey = 'CACHED_LOCATION';
@@ -28,14 +29,20 @@ class AppPrefs {
   // static UserModel? user;
 
   // static const String currentAppLoca
-  Future<bool> get isUserLoggedIn async => _preferences.getBool(prefsLoggedInKey) ?? false;
-  Future<void> get setUserLoggedIn async => _preferences.setBool(prefsLoggedInKey, true);
+  Future<bool> get isUserLoggedIn async =>
+      _preferences.getBool(prefsLoggedInKey) ?? false;
+  Future<void> get setUserLoggedIn async =>
+      _preferences.setBool(prefsLoggedInKey, true);
 
-  static Future<void> get logout async => _preferences.remove(AppPrefs.prefsUsersKey);
-  static Future<bool> get getStartedPressed async => _preferences.getBool(prefsGetStatedKey) ?? false;
+  static Future<void> get logout async =>
+      _preferences.remove(AppPrefs.prefsUsersKey);
+  static Future<bool> get getStartedPressed async =>
+      _preferences.getBool(prefsGetStatedKey) ?? false;
 
   /*  used in splash screens to check if user is new or not to handle which screens to go */
   static bool get getIsNewUser => _preferences.getBool(_newUserKey) ?? true;
-  static Future<bool> get setNewUser async => await _preferences.setBool(_newUserKey, false);
-  static Future<bool> get removeToken async => await _preferences.remove(AppPrefs.prefsUsersKey);
+  static Future<bool> get setNewUser async =>
+      await _preferences.setBool(_newUserKey, false);
+  static Future<bool> get removeToken async =>
+      await _preferences.remove(AppPrefs.prefsUsersKey);
 }

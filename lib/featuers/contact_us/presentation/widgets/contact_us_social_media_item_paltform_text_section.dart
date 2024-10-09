@@ -2,9 +2,10 @@ import '../../../../core/utils/app_styels.dart';
 import '../../../../exports.dart';
 
 class ContactUsSocialMediaItemPaltformTextSection extends StatelessWidget {
-    final String socialPlatformName;
+  final String socialPlatformName;
 
-  const ContactUsSocialMediaItemPaltformTextSection({super.key, required this.socialPlatformName});
+  const ContactUsSocialMediaItemPaltformTextSection(
+      {super.key, required this.socialPlatformName});
 
   @override
   Widget build(BuildContext context) {

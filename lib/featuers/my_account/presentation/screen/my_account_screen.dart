@@ -1,6 +1,5 @@
 import 'package:senior_code_app/core/extensions.dart';
 
-
 import '../../../../exports.dart';
 import '../widgets/my_account_screen_body_section.dart';
 

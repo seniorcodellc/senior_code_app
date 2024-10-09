@@ -57,7 +57,7 @@ class OtpInputFieldSection extends StatelessWidget {
       textStyle: textStyle ?? Theme.of(context).textTheme.titleMedium,
       fieldWidth: width?.w ?? 42.5.w, // Apply the width for each field
       fieldHeight: height?.h ?? 54.w, // Apply the height for each field
-      // fieldStyle: FieldStyle.box, // Apply box style 
+      // fieldStyle: FieldStyle.box, // Apply box style
       borderWidth: borderWidth?.w ?? 1.w, // Set the border width
       // styles: styles, // Custom styles for each field
       decoration: InputDecoration(

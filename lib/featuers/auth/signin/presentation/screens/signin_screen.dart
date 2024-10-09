@@ -1,5 +1,6 @@
 import 'package:senior_code_app/core/extensions.dart';
 import '../../../../../exports.dart';
+import '../widgets/login_bloc_listner.dart';
 import '../widgets/signin_screen_body_section.dart';
 
 class SigninScreen extends StatefulWidget {
@@ -17,7 +18,12 @@ class _SigninScreenState extends State<SigninScreen> {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.w),
-            child: const SigninScreenBodySection(),
+            child: const Column(
+              children: [
+                SigninScreenBodySection(),
+                AuthLoginBlocListner(),
+              ],
+            ),
           ),
         ),
       ),

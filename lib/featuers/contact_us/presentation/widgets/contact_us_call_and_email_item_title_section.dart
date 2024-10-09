@@ -2,9 +2,10 @@ import '../../../../core/utils/app_styels.dart';
 import '../../../../exports.dart';
 
 class ContactUsCallAndEmailItemTitleSection extends StatelessWidget {
-    final String contatTitle;
+  final String contatTitle;
 
-  const ContactUsCallAndEmailItemTitleSection({super.key, required this.contatTitle});
+  const ContactUsCallAndEmailItemTitleSection(
+      {super.key, required this.contatTitle});
 
   @override
   Widget build(BuildContext context) {

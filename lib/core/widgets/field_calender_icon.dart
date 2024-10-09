@@ -5,8 +5,11 @@ import '../../exports.dart';
 class FieldCalenderIcon extends StatelessWidget {
   final double? calenderIconSize;
   final Color? calenderIconColor;
-  const FieldCalenderIcon(
-      {super.key, this.calenderIconSize, this.calenderIconColor, });
+  const FieldCalenderIcon({
+    super.key,
+    this.calenderIconSize,
+    this.calenderIconColor,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ class CategoryText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(left: 9.w),
+      padding: EdgeInsets.only(left: 9.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

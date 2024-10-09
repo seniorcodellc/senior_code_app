@@ -1,7 +1,5 @@
-// ignore_for_file: no_wildcard_variable_uses
 
 import 'package:senior_code_app/core/extensions.dart';
-
 import 'config/constants/app_constants.dart';
 import 'config/constants/localization_constants.dart';
 import 'config/routes/app_routes_helper.dart';

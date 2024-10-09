@@ -1,5 +1,3 @@
-
-
 import '../../../../exports.dart';
 import '../../../home/presentation/widgets/home_dynamic_photo_layout_section.dart';
 import '../../data/category_details_photo_paths.dart';
